@@ -1,0 +1,25 @@
+<app-widepanel>
+    <h1>Let's get in touch!</h1>
+</app-widepanel>
+
+<app-floatingpanel cssClass="lightGray">
+    <p>Want to learn more about me or my work? Have a question I can answer? Please feel free to reach out using the links below. While I monitor my inbox everyday,
+        please allow up to 24-48 hours for a response.</p>
+</app-floatingpanel>
+
+<app-widepanel>
+    <div class="flyer darkBlue">
+        <h1>Where to Find Me</h1>
+        <p>Click on a tile below to view the details!</p>
+    </div>
+
+    <div class="flyerItemGroup lightBlue">
+        <div class="flyerItem" (click)="this.updateBanner('Email', 'mailto:cynicalvoe@gmail.com')">
+            <p><i class="far fa-envelope"></i></p>
+        </div>
+    </div>
+
+    <div id="details" class="darkBlue" *ngIf="this.showBanner">
+        <p><a href={{link}} target="_blank">Click to connect via {{title}}</a></p>
+    </div>
+</app-widepanel>

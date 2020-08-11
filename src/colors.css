@@ -1,0 +1,161 @@
+:root {
+    --color-text: #000;
+    --color-text-inverted: #fff;
+    --color-shadow: #999;
+
+    --color-light-blue: #63adf2;
+    --color-blue: #2274a5;
+    --color-dark-blue: #0d547c;
+
+    --color-light-red: #ffbb59;
+    --color-red: #db4c36;
+    --color-dark-red: #b92a14;
+
+    --color-light-green: #78bf50;
+    --color-green: #507e35;
+    --color-dark-green: #374824;
+
+    --color-light-gray: #ddd;
+    --color-gray: #777;
+
+    --color-white: #fff;
+}
+
+.white {
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+.white a {
+    color: var(--color-light-blue);
+}
+
+.white p a {
+    font-weight: bold;
+}
+
+.white a:hover {
+    color: var(--color-dark-blue);
+}
+
+.lightGray {
+    background-color: var(--color-light-gray);
+    color: var(--color-text);
+}
+
+.lightGray a {
+    color: var(--color-gray);
+}
+
+.lightGray p a {
+    font-weight: bold;
+}
+
+.lightGray a:hover {
+    color: var(--color-light-blue);
+}
+
+.lightBlue {
+    background-color: var(--color-light-blue);
+    color: var(--color-text-inverted);
+}
+
+.lightBlue a {
+    color: var(--color-text-inverted);
+}
+
+.lightBlue p a {
+    font-weight: bold;
+}
+
+.lightBlue a:hover {
+    color: var(--color-blue);
+}
+
+.lightBlue h1, .lightBlue h2 {
+    color: var(--color-text-inverted);
+}
+
+.blue {
+    background-color: var(--color-blue);
+    color: var(--color-text-inverted);
+}
+
+.blue a {
+    color: var(--color-light-blue);
+}
+
+.blue p a {
+    font-weight: bold;
+}
+
+.blue a:hover {
+    color: var(--color-dark-blue);
+}
+
+.blue h1, .blue h2 {
+    color: var(--color-text-inverted);
+}
+
+.darkBlue {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-inverted);
+}
+
+.darkBlue a {
+    color: var(--color-light-blue);
+}
+
+.darkBlue p a {
+    font-weight: bold;
+}
+
+.darkBlue a:hover {
+    color: var(--color-blue);
+}
+
+.darkBlue h1, .darkBlue h2 {
+    color: var(--color-text-inverted);
+}
+
+.red {
+    background-color: var(--color-red);
+    color: var(--color-text-inverted);
+}
+
+.red a {
+    color: var(--color-light-red);
+}
+
+.red p a {
+    font-weight: bold;
+}
+
+.red a:hover {
+    color: var(--color-dark-red);
+}
+
+.red h1, .red h2 {
+    color: var(--color-text-inverted);
+}
+
+.green {
+    background-color: var(--color-light-green);
+    color: var(--color-text-inverted);
+}
+
+.green a {
+    color: var(--color-green);
+}
+
+.green p a {
+    font-weight: bold;
+}
+
+.green a:hover {
+    color: var(--color-dark-green);
+}
+
+.green h1, .green h2 {
+    color: var(--color-text-inverted);
+}

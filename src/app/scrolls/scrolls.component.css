@@ -1,0 +1,47 @@
+/* Large Display */
+@media screen and (min-width: 900px) {
+    #content {
+        margin: 30px auto;
+        display: flex;
+        max-width: 75%;
+        border-radius: 15px;
+    }
+
+    #content app-sidebar {
+        display: inline-block;
+        vertical-align: top;
+        width: 400px;
+    }
+
+    #content markdown {
+        display: inline-block;
+        width: 100%;
+        margin-left: 35px;
+        max-height: 1000px;
+        overflow-y: scroll;
+    }
+}
+
+/* Things smaller than that */
+@media screen and (max-width: 900px){
+    #content app-sidebar {
+        display: block;
+    }
+
+    #content markdown {
+        margin: 15px;
+        display: block;
+    }
+}
+
+#content app-sidebar {
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+#content markdown {
+    padding: 15px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}

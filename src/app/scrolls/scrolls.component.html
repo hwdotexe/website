@@ -1,0 +1,4 @@
+<div id="content" class="white">
+    <app-sidebar (pageUrlOut)="setPageURL($event)"></app-sidebar>
+    <markdown [src]="this.pageUrl" ngPreserveWhitespaces></markdown>
+</div>

@@ -1,0 +1,19 @@
+<div class="sidebarGroup">
+    <div class="sidebarCategory" (click)="this.toggleCollapsed()">
+        <p>{{title}}</p>
+        <i class="fas fa-chevron-right" *ngIf="this.isCollapsed"></i>
+        <i class="fas fa-chevron-down" *ngIf="!this.isCollapsed"></i>
+    </div>
+    <div class="sidebarCategoryContent" *ngIf="!this.isCollapsed">
+        <div *ngFor="let x of this.pages; index as i">
+            <div *ngIf="(x.category.length == 0 && this.categoryID == '') || (x.category.length > 0 && x.category == this.categoryID)" class="sidebarLink" (click)="this.linkClick(i)">
+                <div *ngIf="this.currentPage == i" class="currentPage">
+                    <p>{{x.name}}</p>
+                </div>
+                <div *ngIf="this.currentPage != i">
+                    <p>{{x.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

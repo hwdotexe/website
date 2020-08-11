@@ -1,0 +1,17 @@
+<div id="navigation" class="lightBlue">
+    <div id="navContainer">
+        <img src="../../assets/img/logos/logo_tp.png"/>
+        <button id="mobileMenu" (click)="mobileToggleNav()"><i class="fas fa-bars"></i></button>
+
+        <nav *ngIf="this.showNav">
+            <ul>
+                <li><a [routerLink]="['']" (click)="this.mobileClickHideNav()">Home</a></li>
+                <li><a [routerLink]="['code']" (click)="this.mobileClickHideNav()">Code</a></li>
+                <!-- <li><a [routerLink]="['voice']" (click)="this.mobileClickHideNav()">Voice</a></li> -->
+                <li><a [routerLink]="['about']" (click)="this.mobileClickHideNav()">About</a></li>
+                <li><a [routerLink]="['scrolls']" (click)="this.mobileClickHideNav()">Scrolls</a></li>
+                <li><a [routerLink]="['contact']" (click)="this.mobileClickHideNav()">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

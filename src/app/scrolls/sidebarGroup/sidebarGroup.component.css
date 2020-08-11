@@ -1,0 +1,75 @@
+/* Large Display */
+@media screen and (min-width: 900px) {
+    .sidebarLink {
+        padding: 10px;
+    }
+
+    .sidebarGroup {
+        padding: 0 10px;
+    }
+
+    .sidebarLink:hover i {
+        position: relative;
+        left: 3%;
+    }
+}
+
+/* Things smaller than that */
+@media screen and (max-width: 900px){
+    #sidebarExtra p {
+        margin: 0;
+    }
+
+    .sidebarLink {
+        padding: 5px;
+        margin: 0;
+    }
+}
+
+.sidebarGroup .sidebarCategory {
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebarGroup .sidebarCategory:hover {
+    color: #444;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+#sidebar hr {
+    border: none;
+    border-top: 1px solid #aaa;
+}
+
+#sidebar #sidebarExtra {
+    color: #666;
+    padding: 5px;
+    text-align: center;
+}
+
+.sidebarLink, .sidebarGroupLink {
+    color: #666;
+}
+
+.sidebarLink:hover, .currentPage {
+    color: #444;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.sidebarLink p {
+    margin: 0;
+    max-width: 245px;
+}
+
+.sidebarLink i {
+    display: inline-block;
+    margin-left: 10px;
+}

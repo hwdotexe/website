@@ -1,0 +1,65 @@
+/* Large Display */
+@media screen and (min-width: 900px) {
+    .barcode {
+        font-size: 4em;
+    }
+
+    .sidebarLinkSingle {
+        padding: 10px;
+    }
+}
+
+/* Things smaller than that */
+@media screen and (max-width: 900px){
+    .barcode {
+        font-size: 3em;
+    }
+
+    #sidebar {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
+    .sidebarLinkSingle, .sidebarGroup {
+        padding: 5px;
+    }
+}
+
+.barcode {
+    font-family: "Libre Barcode 39 Text", sans-serif;
+    margin: 0;
+    padding: 5px;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+#sidebar hr {
+    border: none;
+    border-top: 1px solid #aaa;
+}
+
+#sidebar #sidebarExtra {
+    color: #666;
+    padding: 5px;
+    text-align: center;
+}
+
+.sidebarLinkSingle {
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebarLinkSingle p {
+    margin: 0;
+    max-width: 245px;
+}
+
+.sidebarLinkSingle:hover, .currentPage {
+    color: #444;
+    cursor: pointer;
+    text-decoration: underline;
+}

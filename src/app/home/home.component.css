@@ -1,0 +1,13 @@
+/* Desktop-only (900px and above) */
+@media screen and (min-width: 900px) {
+    app-widepanel img {
+        max-width: 256px;
+    }
+}
+
+/* Things smaller than that */
+@media screen and (max-width: 900px){
+    app-widepanel img {
+        max-width: 128px;
+    }
+}

@@ -1,0 +1,49 @@
+/* Desktop-only (900px and above) */
+@media screen and (min-width: 900px) {
+    table {
+        width: 75%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    table td {
+        width: 30%;
+    }
+}
+
+#codeContainer {
+    display: inline-block;
+}
+
+table td {
+    padding: 0;
+    margin: 0;
+}
+
+table div {
+    height: 100%;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-light-blue);
+}
+
+table tr:last-of-type div {
+    border-bottom: none;
+}
+
+h1, p {
+    margin: 5px;
+}
+
+ul {
+    column-count: 2;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.centered {
+    text-align: center;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto:wght@100;300;500;900&display=swap');
+
+/* Desktop-only (900px and above) */
+@media screen and (min-width: 900px) {
+    app-widepanel h1, app-floatingpanel h1, app-floatingpanellite h1 {
+        font-size: 2.6em;
+        padding: 5px;
+    }
+
+    app-widepanel p, app-floatingpanel p, app-floatingpanellite p {
+        font-size: 1.1em;
+    }
+
+    app-floatingpanel h1, app-floatingpanellite h1 {
+        font-size: 2.4em;
+    }
+}
+
+/* Things smaller than that */
+@media screen and (max-width: 900px){
+    app-widepanel h1, app-floatingpanel h1, app-floatingpanellite h1 {
+        font-size: 2em;
+        padding: 3px;
+    }
+
+    app-floatingpanel h1, app-floatingpanellite h1 {
+        font-size: 1.8em;
+        line-height: 1.2em;
+    }
+
+    p>img {
+        max-width: 100%;
+    }
+
+    p>img:active {
+        max-width: 150%;
+    }
+}
+
+/* Elements */
+
+code {
+    background-color: #272822;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+app-widepanel h1, app-floatingpanel h1, app-floatingpanellite h1, app-widepanel h2, app-floatingpanel h2, app-floatingpanellite h2 {
+    margin: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    color: var(--color-text);
+}
+
+app-floatingpanel p, app-floatingpanellite p {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+img.rounded {
+    border-radius: 50%;
+}
+
+/* Tables */
+.itemTable {
+    width: 100%;
+    border-spacing: 0;
+    margin: 10px 0;
+}
+
+.itemTable thead {
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.itemTable td {
+    margin: 0;
+    padding: 5px;
+}
+
+.itemTable tbody tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* Background Textures */
+
+.bg-cogs {
+    background-image: url('assets/img/patterns/floating-cogs.svg');
+}
+
+.bg-circuit {
+    background-image: url('assets/img/patterns/circuit-board.svg');
+}
+
+.bg-shapes {
+    background-image: url('assets/img/patterns/geometry.png');
+}
+
+.bg-prism {
+    background-image: url('assets/img/patterns/prism.png');
+}
+
+.bg-christmas {
+    background-image: url('assets/img/patterns/christmas-dark.png');
+}

@@ -1,0 +1,29 @@
+<app-widepanel>
+    <img src="//gravatar.com/avatar/f2b043c4b8fe8f8adf490dcfba413696?s=512" alt="Profile Image" class="rounded"/>
+    <h1>Hi, I'm Haden</h1>
+</app-widepanel>
+
+<app-widepanel>
+    <app-hangar title="Who I am" tagline="" color="red">
+        <ul>
+            <li>Professional Nerd</li>
+            <li>Monster Slayer</li>
+            <li>Reader</li>
+        </ul>
+    </app-hangar>
+    <app-hangar title="What I do" tagline="" color="green">
+        <ul>
+            <li>Software Engineering</li>
+            <li>Tabletop Games</li>
+            <li>Enjoy the Outdoors</li>
+        </ul>
+    </app-hangar>
+</app-widepanel>
+
+<app-floatingpanel cssClass="blue">
+    <h1>Hello!</h1>
+    <p>Thanks for stopping by!</p>
+    <p>I'm a software developer and self-proclaimed nerd with two college degrees, currently residing in Colorado, USA. When I'm not at work, I spend my time playing tabletop games, reading a good book, or enjoying the outdoors.</p>
+    <p>To see more about what I do, check out the links at the top of the page!</p>
+    <p><a [routerLink]="['about']">Want to learn more about me instead?</a></p>
+</app-floatingpanel>
