@@ -54,7 +54,7 @@ if choice1 == "right":
     choice2 = input("A giant troll stands in front of you. What do you do?\n(fight/flee)>")
 else:
     print("You walk down the left path...")
-    choice2 = input("A kind old lady in a pointy hat offers you a cookie. What do you do?\n(eat/flee)>")
+    choice2 = input("A kind old lady in a pointy hat offers you a cookie. What do you do?\n(eat/reject)>")
 ```
 
 Now the story is coming together! Let's add another conditional to each choice...

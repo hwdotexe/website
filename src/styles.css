@@ -69,6 +69,11 @@ a {
     text-decoration: none;
 }
 
+app-hangar a {
+    color: var(--color-light-blue);
+    font-weight: bold;
+}
+
 a:hover {
     cursor: pointer;
     transition: all 0.2s;
