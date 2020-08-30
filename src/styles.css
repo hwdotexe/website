@@ -59,6 +59,7 @@ app-widepanel h1, app-floatingpanel h1, app-floatingpanellite h1, app-widepanel 
     margin: 0;
     font-family: 'Press Start 2P', sans-serif;
     color: var(--color-text);
+    word-break: break-word;
 }
 
 app-floatingpanel p, app-floatingpanellite p {

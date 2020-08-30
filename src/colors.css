@@ -3,6 +3,7 @@
     --color-text-inverted: #fff;
     --color-shadow: #999;
 
+    --color-light-blue-link: #a8d1f7;
     --color-light-blue: #63adf2;
     --color-blue: #2274a5;
     --color-dark-blue: #0d547c;
@@ -12,7 +13,7 @@
     --color-dark-red: #b92a14;
 
     --color-light-green: #78bf50;
-    --color-green: #507e35;
+    --color-green: #456b2f;
     --color-dark-green: #374824;
 
     --color-light-gray: #ddd;
@@ -82,7 +83,7 @@
 }
 
 .blue a {
-    color: var(--color-light-blue);
+    color: var(--color-light-blue-link);
 }
 
 .blue p a {

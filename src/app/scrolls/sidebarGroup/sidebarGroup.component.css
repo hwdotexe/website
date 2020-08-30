@@ -39,6 +39,11 @@
     font-weight: bold;
 }
 
+.sidebarGroup .sidebarCategoryContent {
+    background-color: var(--color-light-gray);
+    border-radius: 5px;
+}
+
 .clickable:hover {
     cursor: pointer;
 }
