@@ -11,7 +11,6 @@ import { DropexpandComponent } from './ui/dropexpand/dropexpand.component';
 import { WidepanelComponent } from './ui/widepanel/widepanel.component';
 import { FloatingpanelComponent } from './ui/floatingpanel/floatingpanel.component';
 import { CodeComponent } from './code/code.component';
-import { VoiceComponent } from './voice/voice.component';
 import { AudioplayerComponent } from './ui/audioplayer/audioplayer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -34,7 +33,6 @@ import { MarkdownModule } from 'ngx-markdown';
     WidepanelComponent,
     FloatingpanelComponent,
     CodeComponent,
-    VoiceComponent,
     AudioplayerComponent,
     AboutComponent,
     ContactComponent,

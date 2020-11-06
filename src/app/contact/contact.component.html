@@ -7,19 +7,30 @@
         please allow up to 24-48 hours for a response.</p>
 </app-floatingpanel>
 
-<app-widepanel>
-    <div class="flyer darkBlue">
-        <h1>Where to Find Me</h1>
-        <p>Click on a tile below to view the details!</p>
-    </div>
+<app-floatingpanel cssClass="darkBlue">
+    <h1>Where to Find Me</h1>
+    <p class="centered">Click on a tile below to view the details!</p>
 
     <div class="flyerItemGroup lightBlue">
-        <div class="flyerItem" (click)="this.updateBanner('Email', 'mailto:cynicalvoe@gmail.com')">
-            <p><i class="far fa-envelope"></i></p>
+        <div class="flyerItem" (click)="this.updateBanner(ContactDetailEnum.EMAIL)">
+            <p class="centered"><i class="far fa-envelope"></i></p>
+            <p class="centered">Email</p>
+        </div>
+        <div class="flyerItem" (click)="this.updateBanner(ContactDetailEnum.GITHUB)">
+            <p class="centered"><i class="fab fa-github"></i></p>
+            <p class="centered">Github</p>
         </div>
     </div>
 
-    <div id="details" class="darkBlue" *ngIf="this.showBanner">
-        <p><a href={{link}} target="_blank">Click to connect via {{title}}</a></p>
+    <div id="details" *ngIf="this.showingDetail === ContactDetailEnum.EMAIL">
+        <h2>Send me an Email!</h2>
+        <p>hello@hadenwatne.com</p>
+        <p><a href="../../assets/publickey.hello@hadenwatne.com-311615a3faf730431f0b10b4da49f5957f944ac8.txt">PGP Public Key</a></p>
     </div>
-</app-widepanel>
+
+    <div id="details" *ngIf="this.showingDetail === ContactDetailEnum.GITHUB">
+        <h2>Follow me on Github!</h2>
+        <p>Cynicalvoe</p>
+        <p><a href="https://github.com/Cynicalvoe" target="_blank">See my profile</a></p>
+    </div>
+</app-floatingpanel>

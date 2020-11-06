@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ContactDetail } from './ContactDetail';
 
 @Component({
   selector: 'app-contact',
@@ -7,21 +8,18 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  showBanner: boolean;
-  title: string;
-  link: string;
+  ContactDetailEnum = ContactDetail;
+  showingDetail: ContactDetail;
 
   constructor(private pTitle: Title) {
-    this.showBanner = false;
     pTitle.setTitle("Haden Watne | Contact");
   }
 
   ngOnInit() {
+
   }
 
-  updateBanner(title: string, link: string){
-    this.showBanner = true;
-    this.title = title;
-    this.link = link;
+  updateBanner(detail: ContactDetail){
+    this.showingDetail = detail;
   }
 }
