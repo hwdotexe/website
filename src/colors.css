@@ -1,4 +1,4 @@
-:root {
+.light-theme {
     --color-text: #000;
     --color-text-inverted: #fff;
     --color-shadow: #999;
@@ -18,8 +18,38 @@
 
     --color-light-gray: #ddd;
     --color-gray: #777;
+    --color-gray-transparent: rgba(255,255,255,0.5);
 
     --color-white: #fff;
+
+    --color-background: #ddd;
+}
+
+.dark-theme {
+    --color-text: #ddd;
+    --color-text-inverted: #ddd;
+    --color-shadow: #222;
+
+    --color-light-blue-link: #777;
+    --color-light-blue: #5a5a5a;
+    --color-blue: #2a2a2a;
+    --color-dark-blue: #1a1a1a;
+
+    --color-light-red: #555;
+    --color-red: #222;
+    --color-dark-red: #2a2a2a;
+
+    --color-light-green: #4a4a4a;
+    --color-green: #2a2a2a;
+    --color-dark-green: #111;
+
+    --color-light-gray: #777;
+    --color-gray: #666;
+    --color-gray-transparent: rgba(50,50,50,0.5);
+
+    --color-white: #ddd;
+
+    --color-background: #333;
 }
 
 .white {

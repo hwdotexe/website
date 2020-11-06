@@ -27,20 +27,19 @@
 }
 
 .sidebarGroup .sidebarCategory {
-    color: #666;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .sidebarGroup .sidebarCategory:hover {
-    color: #444;
+    color: var(--color-light-blue);
     cursor: pointer;
     font-weight: bold;
 }
 
 .sidebarGroup .sidebarCategoryContent {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-light-blue);
     border-radius: 5px;
 }
 
@@ -48,23 +47,8 @@
     cursor: pointer;
 }
 
-#sidebar hr {
-    border: none;
-    border-top: 1px solid #aaa;
-}
-
-#sidebar #sidebarExtra {
-    color: #666;
-    padding: 5px;
-    text-align: center;
-}
-
-.sidebarLink, .sidebarGroupLink {
-    color: #666;
-}
-
 .sidebarLink:hover, .currentPage {
-    color: #444;
+    color: var(--color-dark-blue);
     cursor: pointer;
     text-decoration: underline;
 }

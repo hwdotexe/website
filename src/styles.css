@@ -113,20 +113,25 @@ img.rounded {
 
 .bg-cogs {
     background-image: url('assets/img/patterns/floating-cogs.svg');
+    background-color: var(--color-background);
 }
 
 .bg-circuit {
     background-image: url('assets/img/patterns/circuit-board.svg');
+    background-color: var(--color-background);
 }
 
 .bg-shapes {
     background-image: url('assets/img/patterns/geometry.png');
+    background-color: var(--color-background);
 }
 
 .bg-prism {
     background-image: url('assets/img/patterns/prism.png');
+    background-color: var(--color-background);
 }
 
 .bg-christmas {
     background-image: url('assets/img/patterns/christmas-dark.png');
+    background-color: var(--color-background);
 }
