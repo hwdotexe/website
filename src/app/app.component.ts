@@ -15,4 +15,12 @@ export class AppComponent implements OnInit {
       this.theme = "dark-theme bg-cogs";
     }
   }
+
+  toggleTheme() {
+    if(this.theme.startsWith("light")) {
+      this.theme = "dark-theme bg-cogs";
+    }else{
+      this.theme = "light-theme bg-shapes";
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   year = new Date().getFullYear();
 
+  @Output() toggleTheme: EventEmitter<boolean> = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  emitToggle() {
+    this.toggleTheme.emit(true);
+  }
 }
