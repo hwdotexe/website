@@ -6,21 +6,49 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  theme = "light-theme bg-shapes";
+  theme: string;
+  texture: string;
+
+  isChristmas = false;
+  hour = 0;
 
   ngOnInit() {
-    let hour = new Date().getHours();
-
-    if(hour <= 7 || hour >= 19) {
-      this.theme = "dark-theme bg-cogs";
+    let date = new Date();
+    this.hour = date.getHours();
+    this.isChristmas = date.getMonth() == 11;
+    
+    if(this.hour <= 7 || this.hour >= 19) {
+      this.setDarkTheme();
+    } else {
+      this.setLightTheme();
     }
   }
 
   toggleTheme() {
     if(this.theme.startsWith("light")) {
-      this.theme = "dark-theme bg-cogs";
+      this.setDarkTheme();
     }else{
-      this.theme = "light-theme bg-shapes";
+      this.setLightTheme();
+    }
+  }
+
+  setDarkTheme() {
+    this.theme = "dark-theme";
+
+    if(this.isChristmas){
+      this.texture = "bg-christmas-dark";
+    } else {
+      this.texture = "bg-cogs";
+    }
+  }
+
+  setLightTheme() {
+    this.theme = "light-theme";
+    
+    if(this.isChristmas){
+      this.texture = "bg-christmas-light";
+    } else {
+      this.texture = "bg-shapes";
     }
   }
 }

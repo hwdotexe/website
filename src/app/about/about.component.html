@@ -5,11 +5,13 @@
 <app-floatingpanel cssClass="lightGray">
     <p>I'm a 20-something guy with too much time on my hands. After graduating college with degrees in Computer Information Systems and
         Business Administration, I've been working full-time as a software developer.</p>
-    <p>My hobbies include programming, playing tabletop games, hiking, and rock climbing.</p>
+    <p>My hobbies include programming, playing tabletop games, and hiking</p>
 </app-floatingpanel>
 
 <app-floatingpanel cssClass="blue">
     <h1>FAQs</h1>
+    <p>Let's have a little Q&A! Here are some questions others have asked me, as well as a few more I've added in just for fun.</p>
+
     <app-dropexpand title="How did you get into programming?">
         <p>When I was 11, I discovered a program to create my own computer games. With it came a simple language that was perfect for
         beginners like me. From there, I taught myself Java in order to mod my Minecraft server, and thus the snowball started
@@ -19,17 +21,37 @@
         <a href="https://www.amazon.com/Python-Programming-Introduction-Computer-Science/dp/1590282752" target="_blank">this book</a> to
         get you started! #NotSponsored</p>
     </app-dropexpand>
-    <app-dropexpand title="I have a million-dollar app idea! Will you make it for me?">
-        <p>Unfortunately, I can't commit extra time to building new projects. If you have an idea for a new app/website, there are lots of
-            development companies out there who will build it for you in a much more professional way. Or, you could give it a shot
-            yourself! Trust me, it's easier than you think!</p>
-    </app-dropexpand>
     <app-dropexpand title="Do you have any tutorials available?">
         <p>Yes! I've recently put together the <a [routerLink]="['../scrolls']">Scrolls</a> page, which is a collection of guides and
         tutorials written by me. Very beginner-friendly and growing all the time! I encourage you to check it out!</p>
     </app-dropexpand>
-    <app-dropexpand title="I love your website, where'd you buy it?">
+    <app-dropexpand title="I love your website, where'd you get it?">
         <p>Thank you! This website was fully designed by me, so I didn't buy it from anywhere.</p>
+    </app-dropexpand>
+    <app-dropexpand title="Mac or PC?">
+        <p>The short answer: Yes.</p>
+        <p>The slightly longer answer: I own both, and I think both have their strengths and weaknesses. It's all about using the right tool for the job,
+            and how easily you want to accomplish the task. I love my Mac, I've built my own PC, and I use both pretty regularly.
+        </p>
+    </app-dropexpand>
+    <app-dropexpand title="Android or iOS?">
+        <p>iOS</p>
+    </app-dropexpand>
+    <app-dropexpand title="What is your personality in 12 characters or less?">
+        <p>INTJ-T / 5w4</p>
+    </app-dropexpand>
+    <app-dropexpand title="Favorite Anime?">
+        <p>Fullmetal Alchemist: Brotherhood</p>
+    </app-dropexpand>
+    <app-dropexpand title="I have a million-dollar app idea! Will you make it for me?">
+        <p>Unfortunately, I can't commit extra time to building new projects. If you have an idea for a new app/website, there are lots of
+            development companies out there who will build it for you in a much more professional way. Or, you could give it a shot
+            yourself! Trust me, it's easier than you think.</p>
+    </app-dropexpand>
+    <app-dropexpand title="Can I follow you on social media?">
+        <p>The only social media account I possess is an Instagram account, which is kept private for close friends and family only. I do not
+            have a Facebook / LinkedIn / Twitter page, and there are no plans to open one at this time.
+        </p>
     </app-dropexpand>
     <p>Can't find the answer you're looking for? Feel free to <a [routerLink]="['../contact']">get in touch</a>!</p>
 </app-floatingpanel>

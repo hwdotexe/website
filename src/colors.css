@@ -18,15 +18,16 @@
 
     --color-light-gray: #ddd;
     --color-gray: #777;
-    --color-gray-transparent: rgba(255,255,255,0.5);
+    --color-gray-transparent: rgba(255,255,255,0.85);
+    --color-gray-highlight: rgba(255,255,255,0.2);
 
     --color-white: #fff;
 
-    --color-background: #ddd;
+    --color-background: #fff;
 }
 
 .dark-theme {
-    --color-text: #ddd;
+    --color-text: #eaeaea;
     --color-text-inverted: #ddd;
     --color-shadow: #222;
 
@@ -45,7 +46,8 @@
 
     --color-light-gray: #777;
     --color-gray: #666;
-    --color-gray-transparent: rgba(50,50,50,0.5);
+    --color-gray-transparent: rgba(50,50,50,0.85);
+    --color-gray-highlight: rgba(255,255,255,0.1);
 
     --color-white: #ddd;
 

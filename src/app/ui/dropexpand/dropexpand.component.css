@@ -10,7 +10,7 @@
 }
 
 .dropTitle:hover {
-    color: #63adf2;
+    color: var(--color-light-blue);
 }
 
 .dropExpand {
@@ -22,5 +22,5 @@
     margin-left: 10px;
     padding: 2px 10px;
     border-radius: 5px;
-    background-color: rgba(245,245,245,0.1);
+    background-color: var(--color-gray-highlight);
 }
