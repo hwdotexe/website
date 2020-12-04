@@ -23,14 +23,22 @@
     </div>
 
     <div id="details" *ngIf="this.showingDetail === ContactDetailEnum.EMAIL">
-        <h2>Send me an Email!</h2>
-        <p>hello@hadenwatne.com</p>
-        <p><a href="../../assets/publickey.hello@hadenwatne.com-311615a3faf730431f0b10b4da49f5957f944ac8.txt">PGP Public Key</a></p>
+        <div id="detailsHeader">
+            <h3><i class="far fa-envelope"></i>Send me an Email!</h3>
+        </div>
+        <div id="detailsContent">
+            <p><a href="mailto:hello@hadenwatne.com">hello@hadenwatne.com</a></p>
+            <p><a href="../../assets/publickey.hello@hadenwatne.com-311615a3faf730431f0b10b4da49f5957f944ac8.asc">PGP Public Key</a></p>
+        </div>
     </div>
 
     <div id="details" *ngIf="this.showingDetail === ContactDetailEnum.GITHUB">
-        <h2>Follow me on Github!</h2>
-        <p>Cynicalvoe</p>
-        <p><a href="https://github.com/Cynicalvoe" target="_blank">See my profile</a></p>
+        <div id="detailsHeader">
+            <h3><i class="fab fa-github"></i>Follow me on Github!</h3>
+        </div>
+        <div id="detailsContent">
+            <p>Cynicalvoe</p>
+            <p><a href="https://github.com/Cynicalvoe" target="_blank">See my profile</a></p>
+        </div>
     </div>
 </app-floatingpanel>

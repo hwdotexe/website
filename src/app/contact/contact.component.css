@@ -31,17 +31,30 @@ Flyer
 }
 
 #details {
-    max-width: 960px;
+    max-width: 70%;
     margin: 10px auto;
     padding: 10px;
     border-radius: 10px;
 }
 
 #details p {
-    display: inline-block;
-    padding: 5px;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
 }
 
-#details p:first-of-type {
-    border-right: 2px solid var(--color-white);
+#details #detailsHeader {
+    background-color: var(--color-light-blue);
+    border-radius: 5px;
+}
+
+#details #detailsHeader * {
+    padding: 5px;
+    margin: 0;
+    
+}
+
+#details #detailsContent p:first-of-type {
+    margin-top: 10px;
+    border-bottom: 2px solid var(--color-white);
 }
