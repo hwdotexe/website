@@ -1,60 +1,33 @@
-/*
-Flyer
-*/
-.flyerItemGroup {
-    display: flex;
-    max-width: 960px;
+/* Desktop-only (900px and above) */
+@media screen and (min-width: 900px) {
+    #contactTable {
+        width: 75%;
+    }
+}
+
+/* Things smaller than that */
+@media screen and (max-width: 900px){
+    #contactTable {
+        width: 100%;
+    }
+}
+
+#contactTable {
+    border-collapse: collapse;
     margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
 }
-.flyerItem {
-    flex: 1;
-    display: inline-block;
-    text-align: center;
-    transition: 0.05s;
+
+#contactTable tr {
+    border: 1px solid var(--color-gray-highlight);
 }
-.flyerItem p {
-    margin-bottom: 0;
-}
-.flyerItem p+p {
-    margin-top: 0;
-    font-weight: bold;
-}
-.flyerItem p i {
+
+.contactFormIcon {
     font-size: 2em;
-}
-.flyerItem:hover {
-    font-weight: bold;
-    cursor: pointer;
-    color: var(--color-dark-blue);
-}
-
-#details {
-    max-width: 70%;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-#details p {
-    margin: 0;
-    text-align: center;
-    word-wrap: break-word;
-}
-
-#details #detailsHeader {
-    background-color: var(--color-light-blue);
-    border-radius: 5px;
-}
-
-#details #detailsHeader * {
     padding: 5px;
-    margin: 0;
-    
 }
 
-#details #detailsContent p:first-of-type {
-    margin-top: 10px;
-    border-bottom: 2px solid var(--color-white);
+.contactFormTitle h3 {
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: bold;
 }

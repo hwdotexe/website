@@ -9,36 +9,26 @@
 
 <app-floatingpanel cssClass="darkBlue">
     <h1>Where to Find Me</h1>
-    <p class="centered">Click on a tile below to view the details!</p>
+    <p class="centered">Here is some of my contact information. Although I can't be found on most social media, I hope to hear from you using one of these alternatives!</p>
 
-    <div class="flyerItemGroup lightBlue">
-        <div class="flyerItem" (click)="this.updateBanner(ContactDetailEnum.EMAIL)">
-            <p class="centered"><i class="far fa-envelope"></i></p>
-            <p class="centered">Email</p>
-        </div>
-        <div class="flyerItem" (click)="this.updateBanner(ContactDetailEnum.GITHUB)">
-            <p class="centered"><i class="fab fa-github"></i></p>
-            <p class="centered">Github</p>
-        </div>
-    </div>
-
-    <div id="details" *ngIf="this.showingDetail === ContactDetailEnum.EMAIL">
-        <div id="detailsHeader">
-            <h3><i class="far fa-envelope"></i>Send me an Email!</h3>
-        </div>
-        <div id="detailsContent">
-            <p><a href="mailto:hello@hadenwatne.com">hello@hadenwatne.com</a></p>
-            <p><a href="../../assets/publickey.hello@hadenwatne.com-311615a3faf730431f0b10b4da49f5957f944ac8.asc">PGP Public Key</a></p>
-        </div>
-    </div>
-
-    <div id="details" *ngIf="this.showingDetail === ContactDetailEnum.GITHUB">
-        <div id="detailsHeader">
-            <h3><i class="fab fa-github"></i>Follow me on Github!</h3>
-        </div>
-        <div id="detailsContent">
-            <p>Cynicalvoe</p>
-            <p><a href="https://github.com/Cynicalvoe" target="_blank">See my profile</a></p>
-        </div>
-    </div>
+    <table id="contactTable">
+        <tbody>
+            <tr>
+                <td class="lightBlue contactFormIcon">
+                    <i class="far fa-envelope"></i>
+                </td>
+                <td class="contactFormDetail">
+                    <p class="centered"><a href="mailto:hello@hadenwatne.com">hello@hadenwatne.com</a> | <a href="../../assets/publickey.hello@hadenwatne.com-311615a3faf730431f0b10b4da49f5957f944ac8.asc">PGP</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="lightBlue contactFormIcon">
+                    <i class="fab fa-github"></i>
+                </td>
+                <td class="contactFormDetail">
+                    <p class="centered"><a href="https://github.com/hwdotexe" target="_blank">@hwdotexe</a></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </app-floatingpanel>
