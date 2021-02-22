@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { WidepanelComponent } from './widepanel.component';
 
@@ -6,7 +6,7 @@ describe('WidepanelComponent', () => {
   let component: WidepanelComponent;
   let fixture: ComponentFixture<WidepanelComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ WidepanelComponent ]
     })

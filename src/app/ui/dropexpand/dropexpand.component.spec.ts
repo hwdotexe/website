@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DropexpandComponent } from './dropexpand.component';
 
@@ -6,7 +6,7 @@ describe('DropexpandComponent', () => {
   let component: DropexpandComponent;
   let fixture: ComponentFixture<DropexpandComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DropexpandComponent ]
     })

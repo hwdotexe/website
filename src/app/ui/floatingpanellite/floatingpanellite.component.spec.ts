@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FloatingpanelliteComponent } from './floatingpanellite.component';
 
@@ -6,7 +6,7 @@ describe('FloatingpanelliteComponent', () => {
   let component: FloatingpanelliteComponent;
   let fixture: ComponentFixture<FloatingpanelliteComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FloatingpanelliteComponent ]
     })
