@@ -11,3 +11,7 @@
         max-width: 128px;
     }
 }
+
+app-widepanel h1 {
+    margin-top: 20px;
+}

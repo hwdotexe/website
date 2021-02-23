@@ -1,10 +1,8 @@
 <div id="sidebar">
     <div id="sidebarExtra" class="clickable" (click)="this.goToWelcome()">
         <p class="barcode">Scrolls</p>
-        <p>Complex stuff. Simple guides.</p>
+        <p><strong>Complex stuff. Simple guides.</strong></p>
     </div>
-    
-    <hr/>
 
     <!-- Links without a category go first -->
     <div *ngFor="let x of this.pages.pages; index as i">
@@ -24,6 +22,4 @@
             <app-sidebarGroup [title]="cat.name" [currentPage]="this.currentPage" [categoryID]="cat.id"></app-sidebarGroup>
         </div>
     </div>
-
-    <hr/>
 </div>

@@ -5,22 +5,48 @@
     }
 
     .sidebarLinkSingle {
-        padding: 10px;
+        padding: 0 10px;
+    }
+
+    #sidebar #sidebarExtra {
+        padding: 5px;
+        margin-top: 10px;
+        border-bottom: 1px solid var(--color-light-blue);
+    }
+
+    #sidebar .sidebarGroup {
+        padding: 0 10px;
     }
 }
 
 /* Things smaller than that */
 @media screen and (max-width: 900px){
     .barcode {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     #sidebar {
-        max-height: 400px;
+        max-height: 500px;
         overflow-y: scroll;
+        border-bottom: 1px solid var(--color-light-blue);
     }
 
     .sidebarLinkSingle, .sidebarGroup {
+        padding: 10px;
+        border-bottom: 1px solid var(--color-gray-highlight);
+    }
+
+    #sidebar .sidebarGroup:last-of-type {
+        border-bottom: none;
+    }
+
+    #sidebar #sidebarExtra {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    #sidebar #sidebarExtra p {
+        margin: 0;
         padding: 5px;
     }
 }
@@ -35,13 +61,7 @@
     cursor: pointer;
 }
 
-#sidebar hr {
-    border: none;
-    border-top: 1px solid var(--color-light-blue);
-}
-
 #sidebar #sidebarExtra {
-    padding: 5px;
     text-align: center;
 }
 
@@ -49,11 +69,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.sidebarLinkSingle p {
-    margin: 0;
-    max-width: 245px;
 }
 
 .sidebarLinkSingle:hover, .currentPage {

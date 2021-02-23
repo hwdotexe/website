@@ -16,7 +16,7 @@
     --color-green: #456b2f;
     --color-dark-green: #374824;
 
-    --color-light-gray: #ddd;
+    --color-light-gray: #ececec;
     --color-gray: #777;
     --color-gray-transparent: rgba(255,255,255,0.85);
     --color-gray-highlight: rgba(255,255,255,0.2);
@@ -32,7 +32,7 @@
     --color-shadow: #222;
 
     --color-light-blue-link: #777;
-    --color-light-blue: #5a5a5a;
+    --color-light-blue: #757575;
     --color-blue: #2a2a2a;
     --color-dark-blue: #1a1a1a;
 
@@ -44,7 +44,7 @@
     --color-green: #2a2a2a;
     --color-dark-green: #111;
 
-    --color-light-gray: #777;
+    --color-light-gray: #6F6F6F;
     --color-gray: #666;
     --color-gray-transparent: rgba(50,50,50,0.85);
     --color-gray-highlight: rgba(255,255,255,0.1);
@@ -86,6 +86,23 @@
 
 .lightGray a:hover {
     color: var(--color-light-blue);
+}
+
+.gray {
+    background-color: var(--color-gray-transparent);
+    color: var(--color-text);
+}
+
+.gray a {
+    color: var(--color-light-blue);
+}
+
+.gray p a {
+    font-weight: bold;
+}
+
+.gray a:hover {
+    color: var(--color-dark-blue);
 }
 
 .lightBlue {
