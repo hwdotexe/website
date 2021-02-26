@@ -52,7 +52,7 @@ Screen-sharing has become a fact of life, and there is somebody streaming their 
 2. It demonstrates a lack of awareness of your own presentation.
 3. There are indicators within most virtual meeting software to answer this question for you.
 
-In my opinion, **you should know how to share your screen, look for the indicators, and feel confident others are seeing what you do.** The most important of these, I think, are the screen-sharing indicators. Here are some support articles you can use to master the art of sharing content in a group call:
+In my opinion, **you should know how to share your screen, look for the indicators, and feel confident others are seeing what you see.** The most important of these, I think, are the screen-sharing indicators. Here are some support articles you can use to master the art of sharing content in a group call:
 
 - [(Microsoft Teams) Show your screen during a meeting](https://support.microsoft.com/en-us/office/show-your-screen-during-a-meeting-90c84e5a-b6fe-4ed4-9687-5923d230d3a7)
 - [(Zoom) Sharing your screen content or second camera](https://support.zoom.us/hc/en-us/articles/201362153-Sharing-your-screen-content-or-second-camera)
