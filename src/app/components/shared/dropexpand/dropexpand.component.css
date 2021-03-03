@@ -3,6 +3,10 @@
     .dropTitle:hover {
         cursor: pointer;
     }
+
+    .dropText {
+        margin-left: 10px;
+    }
 }
 
 .dropTitle {
@@ -19,7 +23,6 @@
 }
 
 .dropText {
-    margin-left: 10px;
     padding: 2px 10px;
     border-radius: 5px;
     background-color: var(--color-gray-highlight);
