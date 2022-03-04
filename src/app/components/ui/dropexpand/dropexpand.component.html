@@ -1,0 +1,9 @@
+<div class="text-left m-1">
+    <div (click)="toggleText()" class="inline-block hover:cursor-pointer hover:text-sky-900 dark:hover:text-gray-800 p-2">
+        <p class="inline-block w-[10px] mr-2">{{this.dropText}}</p>
+        <p class="inline-block">{{title}}</p>
+    </div>
+    <div *ngIf="showText" class="bg-gray-200 bg-opacity-20 p-3 rounded-md">
+        <ng-content></ng-content>
+    </div>
+</div>

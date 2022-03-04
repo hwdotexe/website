@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NotFoundComponent } from './components/notfound/notfound.component';
-import { HomeComponent } from './components/home/home.component';
-import { CodeComponent } from './components/code/code.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ScrollsComponent } from './components/scrolls/scrolls.component';
+import { NotFoundComponent } from './components/pages/notfound/notfound.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { CodeComponent } from './components/pages/code/code.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 
 
 const routes: Routes = [
@@ -13,7 +12,6 @@ const routes: Routes = [
   { path: 'code', component: CodeComponent},
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'scrolls', component: ScrollsComponent},
   { path: '**', component: NotFoundComponent }];
 
 @NgModule({
