@@ -1,18 +1,15 @@
 <div class="text-center">
-    <img src="//avatars.githubusercontent.com/u/5459165?s=460&v=4" alt="Profile Image" title="Profile Image" class="m-auto max-h-40 rounded-full my-4 lg:max-h-72"/>
-    <h1 class="text-3xl font-game mt-6">Hi, I'm Haden</h1>
+    <hw-header pageTitle="Hi, I'm Haden" imageUrl="//avatars.githubusercontent.com/u/5459165?s=460&v=4" imageCaption="Profile Image"></hw-header>
 
-    <hr class="w-9/12 mx-auto my-6 dark:border-gray-800"/>
-
-    <div class="p-3 rounded-md bg-sky-700 dark:bg-gray-600 text-white w-11/12 my-2 mx-auto lg:w-9/12">
+    <hw-bubble bgColor="bg-sky-600" bgColorDark="bg-gray-600" textColor="text-white">
         <h1 class="text-2xl font-game mt-2">Hello!</h1>
 
         <div class="text-left p-2">
             <p>Thanks for stopping by!</p>
             <p class="my-2">I'm a full-time software developer and university graduate currently residing in Colorado, USA. I'm always on the lookout for exciting opportunities to connect with others and build incredible things. I'm passionate about building inclusive, efficient, and private systems to empower others. This site is here to introduce some of the things I am working on, have recently learned, or am excited to share with you.</p>
-            <p>To see more about what I do, check out the <a [routerLink]="['code']" class="p-1 px-2 bg-gray-200 bg-opacity-40 rounded-md">Code</a> page at the top! Or, to learn more about me, visit the <a [routerLink]="['about']" class="p-1 px-2 bg-gray-200 bg-opacity-40 rounded-md">About</a> page.</p>
+            <p>To see more about what I do, check out the <hw-link destination="code" display="Code"></hw-link> page at the top! Or, to learn more about me, visit the <hw-link destination="about" display="About"></hw-link> page.</p>
         </div>
-    </div>
+    </hw-bubble>
 
     <app-hangar title="Who I Am" tagline="" color="bg-green-600" class="block lg:inline-block my-3">
         <ul>
@@ -22,7 +19,7 @@
             <li>Coffee Addict</li>
         </ul>
     </app-hangar>
-    <app-hangar title="What I Do" tagline="" color="bg-red-800" class="block lg:inline-block my-3">
+    <app-hangar title="What I Do" tagline="" color="bg-red-600" class="block lg:inline-block my-3">
         <ul>
             <li>Full-Stack Software Development</li>
             <li>Tabletop Games</li>

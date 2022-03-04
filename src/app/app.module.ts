@@ -15,6 +15,9 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { HangarComponent } from './components/ui/hangar/hangar.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
+import { LinkComponent } from './components/ui/link/link.component';
+import { PageHeaderComponent } from './components/ui/page-header/page-header.component';
+import { BubbleComponent } from './components/ui/bubble/bubble.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { MarkdownModule } from 'ngx-markdown';
     AudioplayerComponent,
     AboutComponent,
     ContactComponent,
-    HangarComponent
+    HangarComponent,
+    LinkComponent,
+    PageHeaderComponent,
+    BubbleComponent
   ],
   imports: [
     BrowserModule,

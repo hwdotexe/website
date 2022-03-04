@@ -1,0 +1,10 @@
+<div *ngIf="destination && display" class="inline-block bg-gray-100 bg-opacity-30 dark:bg-opacity-10 px-1 m-1 rounded-md hover:underline text-sm">
+    <a *ngIf="!isExternal" [routerLink]="['/'+destination]" class="inline-block">
+        <i class="fa-solid fa-link text-xs py-1"></i>
+        {{display}}
+    </a>
+    <a *ngIf="isExternal" href="{{destination}}" target="_blank" class="inline-block">
+        {{display}}
+        <i class="fa-solid fa-up-right-from-square mx-1 text-xs align-top"></i>
+    </a>
+</div>

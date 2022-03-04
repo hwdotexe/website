@@ -1,14 +1,11 @@
 <div class="text-center">
-    <div class="p-3 my-4">
-        <p class="inline-block font-game text-xl align-middle mx-2 text-green-800 dark:text-gray-800 italic">>></p>
-        <h1 class="inline-block font-game text-4xl align-middle">Code</h1>
-    </div>
+    <hw-header pageTitle="Code">
+        <hw-bubble bgColor="bg-gray-200" bgColorDark="bg-gray-600">
+            <p>Programming is a long-time fascination of mine, which has led me to pursue a professional career in the IT field. I love going to work every day knowing I am making a positive impact on something much bigger than myself. Over time, I've learned a little bit about a lot of things, and I've highlighted some of those below.</p>
+        </hw-bubble>
+    </hw-header>
 
-    <p class="p-5 text-left w-11/12 mx-auto my-2 lg:w-9/12 lg:text-center bg-gray-200 dark:bg-gray-600 rounded-md">Programming is a long-time fascination of mine, which has led me to pursue a professional career in the IT field. I love going to work every day knowing I am making a positive impact on something much bigger than myself. Over time, I've learned a little bit about a lot of things, and I've highlighted some of those below.</p>
-
-    <hr class="w-9/12 mx-auto my-6 dark:border-gray-800"/>
-
-    <div class="p-3 w-11/12 mx-auto my-4 lg:w-9/12 lg:text-center bg-green-600 dark:bg-gray-600 text-white rounded-md">
+    <hw-bubble bgColor="bg-green-600" bgColorDark="bg-gray-600" textColor="text-white">
         <h1 class="text-2xl font-game my-3">On The Job</h1>
         <table class="table-fixed m-auto w-full lg:w-3/5">
             <thead>
@@ -18,28 +15,28 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Agile, SCRUM, and SAFe</td>
-                    <td>Git and TFS Version Control</td>
+                    <td class="p-1">Agile, SCRUM, and SAFe</td>
+                    <td class="p-1">Git and TFS Version Control</td>
                 </tr>
                 <tr class="bg-gray-200 bg-opacity-20">
-                    <td>Production Releases</td>
-                    <td>Splunk</td>
+                    <td class="p-1">Production Releases</td>
+                    <td class="p-1">Splunk</td>
                 </tr>
                 <tr>
-                    <td>Accessibility & Inclusive Design</td>
-                    <td>Azure DevOps Server</td>
+                    <td class="p-1">Accessibility & Inclusive Design</td>
+                    <td class="p-1">Azure DevOps Server</td>
                 </tr>
                 <tr class="bg-gray-200 bg-opacity-20">
-                    <td>Full-stack Development</td>
-                    <td>REST APIs</td>
+                    <td class="p-1">Full-stack Development</td>
+                    <td class="p-1">REST APIs</td>
                 </tr>
                 <tr>
-                    <td>Customer-focused Objectives</td>
-                    <td>Windows, macOS, and Linux</td>
+                    <td class="p-1">Customer-focused Objectives</td>
+                    <td class="p-1">Windows, macOS, and Linux</td>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </hw-bubble>
 
     <app-hangar title="Languages" tagline="Programming languages I am familiar with" color="bg-sky-600" class="block lg:inline-block my-3">
         <ul class="columns-2">
@@ -78,15 +75,14 @@
         </ul>
     </app-hangar>
 
-    <div class="p-3 w-11/12 mx-auto my-4 lg:w-9/12 lg:text-center bg-sky-600 dark:bg-gray-600 text-white rounded-md">
+    <hw-bubble bgColor="bg-sky-600" bgColorDark="bg-gray-600" textColor="text-white">
         <h1 class="text-2xl font-game my-3">Code Cred</h1>
-        <p class="p-1">To view a list of technical certifications and credentials I've acquired, please visit my Credly page below.</p>
-        <p class="p-2 px-3 my-2 bg-gray-200 bg-opacity-40 rounded-md w-fit m-auto"><a href="https://www.credly.com/users/haden-watne/badges" target="_blank">Go to Credly</a></p>
+        <p class="p-1">To view a list of technical certifications and credentials I've acquired, please visit my <hw-link isExternal="true" destination="https://www.credly.com/users/haden-watne/badges" display="Credly"></hw-link> page.</p>
         <p class="text-sm p-1">Credly is a third-party service that verifies and displays the certifications I have earned.</p>
-    </div>
+    </hw-bubble>
 
-    <div class="p-3 w-11/12 mx-auto my-4 lg:w-9/12 lg:text-center bg-red-600 dark:bg-gray-600 text-white rounded-md">
+    <hw-bubble bgColor="bg-red-600" bgColorDark="bg-gray-600" textColor="text-white">
         <h1 class="text-2xl font-game my-3">Free Time</h1>
-        <p>When I'm not on the job, you can find a variety of personal projects and contributions on my Github account, <a href="https://github.com/hwdotexe" target="_blank" class="p-1 px-2 bg-gray-200 bg-opacity-40 rounded-md">@hwdotexe</a></p>
-    </div>
+        <p>When I'm not on the job, you can find a variety of personal projects and contributions on my Github account, <hw-link isExternal="true" destination="https://github.com/hwdotexe" display="@hwdotexe"></hw-link></p>
+    </hw-bubble>
 </div>

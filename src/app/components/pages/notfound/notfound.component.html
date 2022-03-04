@@ -1,10 +1,12 @@
 <div class="text-center">
-    <h1 class="p-3 inline-block font-game text-4xl align-middle">#404</h1>
+    <hw-header pageTitle="#404">
+        <hw-bubble bgColor="bg-gray-200" bgColorDark="bg-gray-600">
+            <p>Perhaps the archives are incomplete.</p>
+        </hw-bubble>
+    </hw-header>
 
-    <p class="p-5 text-left w-11/12 mx-auto lg:w-9/12 lg:text-center bg-gray-200 dark:bg-gray-600 rounded-md">Perhaps the archives are incomplete.</p>
-
-    <hr class="w-9/12 mx-auto my-4 dark:border-gray-800"/>
-
-    <p>The page you were just looking for couldn't be found. I don't know whose fault that is. Look, instead of pointing fingers, why don't we try that again?</p>
-    <p class="my-3"><a [routerLink]="['']" class="p-2 px-3 text-white font-bold bg-blue-500 dark:bg-gray-400 hover:bg-blue-700 dark:hover:bg-gray-600 rounded-md">Back to Home</a></p>
+    <div class="p-3 w-11/12 mx-auto my-4 lg:w-9/12 lg:text-center bg-sky-600 dark:bg-gray-600 text-white rounded-md">
+        <p>The page you were just looking for couldn't be found. I don't know whose fault that is. Look, instead of pointing fingers, why don't we try that again?</p>
+        <p><hw-link destination="/" display="Back to Home"></hw-link></p>
+    </div>
 </div>
