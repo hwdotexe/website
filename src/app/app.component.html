@@ -1,5 +1,9 @@
-<app-nav></app-nav>
-<div class="w-full p-2 bg-gray-50 dark:bg-gray-700 shadow-md m-auto lg:p-2 lg:w-10/12">
-    <router-outlet></router-outlet>
+<div class="{{theme}}">
+    <body class="font-body bg-gray-100 dark:bg-gray-800 dark:text-gray-50">
+        <app-nav></app-nav>
+        <div class="w-full p-2 bg-gray-50 dark:bg-gray-700 shadow-md m-auto lg:p-2 lg:w-10/12">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </body>
 </div>
-<app-footer></app-footer>

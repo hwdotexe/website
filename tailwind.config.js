@@ -1,5 +1,6 @@
 module.exports = {
   // mode: "aot",
+  darkMode: 'class',
   content: [
     "./src/**/*.{html,ts}",
   ],

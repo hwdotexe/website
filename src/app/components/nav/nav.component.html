@@ -1,15 +1,19 @@
 <div class="bg-sky-700 dark:bg-gray-900 lg:max-h-28 shadow-md">
     <div class="m-auto py-2 lg:flex lg:py-0 lg:px-2">
-        <img src="../../assets/img/logos/logo_tp.png" class="max-h-16 m-auto lg:max-h-20 lg:m-0"/>
+        <div class="flex lg:block lg:flex-initial">
+            <img src="../../assets/img/logos/logo_tp.png" class="max-h-16 inline-block flex-initial mx-3 lg:mx-0 lg:max-h-20"/>
+            <div class="block flex-1 lg:hidden"></div>
+            <i class="fa-solid fa-lightbulb p-3 my-auto inline-block border text-yellow-200 border-blue-400 rounded-md flex-initial mx-3 lg:mx-4 hover:cursor-pointer dark:text-white dark:border-gray-700" (click)="toggleDarkMode()"></i>
+        </div>
 
         <div class="hidden lg:block lg:flex-1"></div>
 
         <nav class="max-w-5xl m-auto py-2 lg:py-0">
             <ul class="font-body font-bold text-xl text-white flex justify-center">
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['']" (click)="this.mobileClickHideNav()">Home</a></li>
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['code']" (click)="this.mobileClickHideNav()">Code</a></li>
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['about']" (click)="this.mobileClickHideNav()">About</a></li>
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['contact']" (click)="this.mobileClickHideNav()">Contact</a></li>
+                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['']">Home</a></li>
+                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['code']">Code</a></li>
+                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['about']">About</a></li>
+                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-blue-800 dark:hover:text-gray-500" [routerLink]="['contact']">Contact</a></li>
             </ul>
         </nav>
     </div>

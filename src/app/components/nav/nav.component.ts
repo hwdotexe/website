@@ -1,32 +1,19 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { DarkModeService } from 'src/app/services/dark-mode-service/dark-mode.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
   showNav: boolean;
 
-  constructor() {
+  constructor(private darkModeService: DarkModeService) {
     this.showNav = window.innerWidth >= 900;
   }
 
-  ngOnInit() {
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.showNav = window.innerWidth >= 900;
-  }
-
-  mobileToggleNav() {
-    this.showNav = !this.showNav;
-  }
-
-  mobileClickHideNav() {
-    if(window.innerWidth < 900){
-      this.showNav = false;
-    }
+  toggleDarkMode(): void {
+    this.darkModeService.toggleDarkMode();
   }
 }
