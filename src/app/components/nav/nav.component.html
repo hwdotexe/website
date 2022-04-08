@@ -1,20 +1,18 @@
 <div class="bg-sky-700 dark:bg-gray-900 lg:max-h-28 shadow-md lg:mb-20">
-    <div class="m-auto py-2 lg:flex lg:py-0 lg:px-2">
-        <div class="flex lg:block lg:flex-initial">
-            <img src="../../assets/img/logos/logo_tp.png" class="max-h-16 inline-block flex-initial mx-3 lg:mx-0 lg:max-h-20"/>
-            <div class="block flex-1 lg:hidden"></div>
-            <i class="fa-solid fa-lightbulb p-3 my-auto inline-block border text-yellow-300 border-blue-400 rounded-md flex-initial mx-3 lg:mx-4 hover:cursor-pointer dark:text-white dark:border-gray-700" (click)="toggleDarkMode()"></i>
-        </div>
-
-        <div class="hidden lg:block lg:flex-1"></div>
-
-        <nav class="max-w-5xl m-auto py-2 lg:py-0">
-            <ul class="font-body font-bold text-xl text-white flex justify-center">
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['']">Home</a></li>
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['code']">Code</a></li>
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['about']">About</a></li>
-                <li class="flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['contact']">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="w-full mx-auto p-2 text-center lg:py-0">
+        <ul class="flex font-body font-bold text-lg lg:text-xl text-white">
+            <li class="self-center flex-initial"><img src="../../assets/img/logos/logo_tp.png" class="max-h-16 inline-block flex-initial hover:cursor-pointer lg:max-h-20" [routerLink]="['']"/></li>
+            <li class="self-center flex-1"></li>
+            <!-- <li class="self-center flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['']">Home</a></li> -->
+            <li class="self-center flex-initial"><hw-nav-link [currentPage]="currentPage" destinationPage="" display="Home"></hw-nav-link></li>
+            <!-- <li class="self-center flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['code']"><hw-page-indicator *ngIf="currentPage === '/code'"></hw-page-indicator>Code</a></li> -->
+            <li class="self-center flex-initial"><hw-nav-link [currentPage]="currentPage" destinationPage="code" display="Code"></hw-nav-link></li>
+            <!-- <li class="self-center flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['about']"><hw-page-indicator *ngIf="currentPage === '/about'"></hw-page-indicator>About</a></li> -->
+            <li class="self-center flex-initial"><hw-nav-link [currentPage]="currentPage" destinationPage="about" display="About"></hw-nav-link></li>
+            <!-- <li class="self-center flex-initial"><a class="px-2 py-1 lg:px-3 hover:text-sky-900 dark:hover:text-gray-500" [routerLink]="['contact']"><hw-page-indicator *ngIf="currentPage === '/contact'"></hw-page-indicator>Contact</a></li> -->
+            <li class="self-center flex-initial"><hw-nav-link [currentPage]="currentPage" destinationPage="contact" display="Contact"></hw-nav-link></li>
+            <li class="self-center flex-1"></li>
+            <li class="self-center flex-initial"><i class="px-2 py-1 lg:px-3 fa-solid fa-lightbulb text-yellow-300 hover:cursor-pointer dark:text-white" (click)="toggleDarkMode()"></i></li>
+        </ul>
+    </nav>
 </div>

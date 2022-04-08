@@ -18,6 +18,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { LinkComponent } from './components/ui/link/link.component';
 import { PageHeaderComponent } from './components/ui/page-header/page-header.component';
 import { BubbleComponent } from './components/ui/bubble/bubble.component';
+import { NavLinkComponent } from './components/ui/nav-link/nav-link.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BubbleComponent } from './components/ui/bubble/bubble.component';
     HangarComponent,
     LinkComponent,
     PageHeaderComponent,
-    BubbleComponent
+    BubbleComponent,
+    NavLinkComponent
   ],
   imports: [
     BrowserModule,
