@@ -7,7 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/pages/notfound/notfound.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { DropExpandComponent } from './components/ui/dropexpand/dropexpand.component';
+import { AccordionComponent } from './components/ui/accordion/accordion.component';
 import { CodeComponent } from './components/pages/code/code.component';
 import { AudioplayerComponent } from './components/ui/audioplayer/audioplayer.component';
 import { AboutComponent } from './components/pages/about/about.component';
@@ -27,7 +27,7 @@ import { NavLinkComponent } from './components/ui/nav-link/nav-link.component';
     FooterComponent,
     NotFoundComponent,
     HomeComponent,
-    DropExpandComponent,
+    AccordionComponent,
     CodeComponent,
     AudioplayerComponent,
     AboutComponent,
