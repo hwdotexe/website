@@ -19,12 +19,12 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.displayClass = 'animate__delay-1s';
-    this.date = this.datePipe.transform(new Date(), 'MM/YYYY');
+    this.date = this.datePipe.transform(new Date(), 'YYYY');
 
     this.showBanner$ = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map((event: NavigationEnd) => {
-        return this.date === '01/2023' && event.url !== '/note';
+        return this.date === '2022' && event.url !== '/note';
       })
     );
   }
