@@ -1,0 +1,25 @@
+<div
+  *ngIf="showBanner$ | async"
+  class="{{
+    displayClass
+  }} animate__animated animate__slideInUp w-full fixed bottom-0 px-4 lg:px-6 text-center shadow-lg text-white font-bold bg-sky-700 dark:bg-gray-900"
+>
+  <!-- Close button -->
+  <div class="w-full text-right pt-2">
+    <i
+      class="fa-solid fa-xmark p-2 hover:cursor-pointer"
+      (click)="closeBanner()"
+    ></i>
+  </div>
+
+  <!-- Content -->
+  <div class="pb-7">
+    <p
+      [routerLink]="['note']"
+      class="hover:cursor-pointer p-1"
+      (click)="closeBanner()"
+    >
+      🏳️‍🌈 Read the 2023 Note <i class="fa-solid fa-chevron-right"></i>
+    </p>
+  </div>
+</div>
