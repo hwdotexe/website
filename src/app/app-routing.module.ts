@@ -5,17 +5,25 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { CodeComponent } from './components/pages/code/code.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-
+import { NoteComponent } from './components/pages/note/note.component';
+import { NoteRouteGuardService } from './services/route-guards/note/note-route-guard.service';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full'},
-  { path: 'code', component: CodeComponent},
-  { path: 'about', component: AboutComponent},
-  { path: 'contact', component: ContactComponent},
-  { path: '**', component: NotFoundComponent }];
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'code', component: CodeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'note', component: NoteComponent, canActivate: [NoteRouteGuardService] },
+  { path: '**', component: NotFoundComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled', relativeLinkResolution: 'legacy' })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      relativeLinkResolution: 'legacy'
+    })
+  ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

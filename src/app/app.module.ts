@@ -19,6 +19,9 @@ import { LinkComponent } from './components/ui/link/link.component';
 import { PageHeaderComponent } from './components/ui/page-header/page-header.component';
 import { BubbleComponent } from './components/ui/bubble/bubble.component';
 import { NavLinkComponent } from './components/ui/nav-link/nav-link.component';
+import { BannerComponent } from './components/ui/banner/banner.component';
+import { NoteComponent } from './components/pages/note/note.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,15 +39,12 @@ import { NavLinkComponent } from './components/ui/nav-link/nav-link.component';
     LinkComponent,
     PageHeaderComponent,
     BubbleComponent,
-    NavLinkComponent
+    NavLinkComponent,
+    BannerComponent,
+    NoteComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient })
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient })],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
