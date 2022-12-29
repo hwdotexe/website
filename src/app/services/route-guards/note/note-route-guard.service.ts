@@ -10,7 +10,7 @@ export class NoteRouteGuardService implements CanActivate {
   constructor(private router: Router, private datePipe: DatePipe) {}
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
-    let isDateValid = this.datePipe.transform(new Date(), 'MM/YYYY') === '01/2023';
+    let isDateValid = this.datePipe.transform(new Date(), 'YYYY') === '2023';
 
     if (!isDateValid) {
       this.router.navigate(['/not-found']);
