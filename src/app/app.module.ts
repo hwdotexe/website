@@ -19,8 +19,6 @@ import { LinkComponent } from './components/ui/link/link.component';
 import { PageHeaderComponent } from './components/ui/page-header/page-header.component';
 import { BubbleComponent } from './components/ui/bubble/bubble.component';
 import { NavLinkComponent } from './components/ui/nav-link/nav-link.component';
-import { BannerComponent } from './components/ui/banner/banner.component';
-import { NoteComponent } from './components/pages/note/note.component';
 import { DatePipe } from '@angular/common';
 
 @NgModule({
@@ -39,9 +37,7 @@ import { DatePipe } from '@angular/common';
     LinkComponent,
     PageHeaderComponent,
     BubbleComponent,
-    NavLinkComponent,
-    BannerComponent,
-    NoteComponent
+    NavLinkComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient })],
   providers: [DatePipe],
