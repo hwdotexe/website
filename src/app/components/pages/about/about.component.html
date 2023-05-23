@@ -1,87 +1,128 @@
 <div class="text-center">
-    <hw-header pageTitle="About Me">
-        <hw-bubble bgColor="bg-gray-200" bgColorDark="bg-gray-600">
-            <p>I'm a geeky 20-something with a passion for building, learning, and implementing new ideas. I graduated college with with degrees in <strong>Computer Information Systems</strong> and <strong>Business Administration</strong>, and when I'm not at work, I enjoy playing video games and tabletop RPGs, casual hiking, music, reading, and working on side projects.</p>
-        </hw-bubble>
-    </hw-header>
-
-    <hw-bubble bgColor="bg-sky-600" bgColorDark="bg-gray-600" textColor="text-white">
-        <h1 class="text-2xl font-game my-3">Q & A</h1>
-        <p>Let's get to know each other a little more!</p>
-
-        <hr class="w-9/12 mx-auto my-4 dark:border-gray-800"/>
-
-        <app-accordion title="How did you get into programming?">
-            <p>When I was 11, I discovered a program to create my own computer games. With it came a simple language that was perfect for
-            beginners like me. From there, I taught myself Java in order to mod my Minecraft server, and thus the snowball started
-            rolling.</p>
-            <p>If you're looking to get started with programming, I recommend beginning with <a href="https://www.python.org/downloads/" target="_blank">Python</a>
-            because of its simple syntax. I also recommend checking out
-            <hw-link isExternal="true" destination="https://www.amazon.com/Python-Programming-Introduction-Computer-Science/dp/1590282752" display="this book"></hw-link> to
-            get you started! #NotSponsored</p>
-        </app-accordion>
-        <app-accordion title="What are you passionate about?">
-            <p class="my-2">I'm a major privacy advocate - educating others on ways to protect their digital privacy is a personal goal of mine, and I'm afraid that we're seeing privacy rights disappearing each day.</p>
-            <p class="my-2">I'm also a big proponent of digital security, and I encourage everyone I meet to ensure their data is safe on the Internet.</p>
-            <p class="my-2">Lastly, advertising is one of my biggest pet peeves, and I make lots of decisions based on ads alone. I much prefer to pay for a service that's ad-free than to click through pop-ups or sell my data.</p>
-
-            <p>Here are some great resources to learn more:</p>
-            <hw-link isExternal="true" destination="https://brianlovin.com/security" display="Security Checklist"></hw-link>
-            <hw-link isExternal="true" destination="https://www.thinkprivacy.ch/checklist" display="Privacy Checklist"></hw-link>
-            <hw-link isExternal="true" destination="https://restoreprivacy.com/google-alternatives" display="Google Product Alternatives"></hw-link>
-        </app-accordion>
-        <app-accordion title="Dream Job?">
-            <p>I would love to work in a software engineering or architectural role at a company that shares my values for privacy and inclusive design. There are a few large tech companies out there who make this a priority, and my goal is to someday have the opportunity to work at one of them.</p>
-        </app-accordion>
-        <app-accordion title="Tell me about your website!">
-            <p>This website was fully designed by me. It's been an ongoing personal project for years, and it has undergone several redesigns during the process.</p>
-            <p>The current version is using Angular 12 with TailwindCSS 3, and it is hosted by Github Pages.</p>
-        </app-accordion>
-        <app-accordion title="Mac or PC?">
-            <p>The short answer: Yes.</p>
-            <p>The slightly longer answer: I own both, and I think both have their strengths and weaknesses. It's all about using the right tool for the job,
-                and how easily you want to accomplish the task. I love my Mac, I've built my own PC, and I use both pretty regularly.
-            </p>
-        </app-accordion>
-        <app-accordion title="Android or iOS?">
-            <p>Right now, I use iOS</p>
-        </app-accordion>
-        <app-accordion title="Describe your personality!">
-            <p>I'm an INTJ on the Myers-Briggs scale, and my Enneagram is a 5 wing-6.</p>
-        </app-accordion>
-        <app-accordion title="Favorite Anime?">
-            <ul class="list-disc pl-4">
-                <li>Fullmetal Alchemist: Brotherhood</li>
-                <li>The Promised Neverland (Season 1)</li>
-                <li>My Hero Academia</li>
-            </ul>
-        </app-accordion>
-        <app-accordion title="Favorite Video Games?">
-            <ul class="list-disc pl-4">
-                <li>The Legend of Zelda series
-                    <ul class="ml-4 list-disc">
-                        <li>Breath of the Wild</li>
-                        <li>Minish Cap</li>
-                        <li>Ocarina of Time</li>
-                        <li>Twilight Princess</li>
-                    </ul>
-                </li>
-                <li>Minecraft: Java Edition</li>
-                <li>Portal 2</li>
-                <li>Hades</li>
-            </ul>
-        </app-accordion>
-        <app-accordion title="Do you take app requests?">
-            <p>Unfortunately, I can't commit extra time to building new projects right now. However, having an exciting idea for a project is a great way to begin your
-                own programming journey! The task may seem daunting, but with enough practice, programming can be both easy and fun. Give it a try!</p>
-        </app-accordion>
-        <app-accordion title="Can I follow you on social media?">
-            <p>Thank you for your interest! Unfortunately, I'm not a big social media user, so I don't have any accounts or pages to share.</p>
-            <p>If you are interested in professional connections, I have some links available on the <hw-link destination="contact" display="Contact"></hw-link> page, so please feel free to check them out!</p>
-        </app-accordion>
-
-        <hr class="w-9/12 mx-auto my-4 dark:border-gray-800"/>
-
-        <p class="text-sm">Can't find the answer you're looking for? Feel free to <hw-link destination="contact" display="get in touch"></hw-link>!</p>
+  <hw-header pageTitle="About Me">
+    <hw-bubble bgColor="bg-gray-200" bgColorDark="bg-gray-600">
+      <p>
+        I'm a geeky 20-something with a passion for building, learning, and implementing new ideas. I graduated college with with degrees in
+        <strong>Computer Information Systems</strong>
+        and
+        <strong>Business Administration</strong>
+        , and when I'm not at work, I enjoy playing video games and tabletop RPGs, casual hiking, music, reading, and working on side projects.
+      </p>
     </hw-bubble>
+  </hw-header>
+
+  <hw-bubble bgColor="bg-sky-600" bgColorDark="bg-gray-600" textColor="text-white">
+    <h1 class="text-2xl font-game my-3">Q & A</h1>
+    <p>Let's get to know each other a little more!</p>
+
+    <hr class="w-9/12 mx-auto my-4 dark:border-gray-800" />
+
+    <app-accordion title="How did you get into programming?">
+      <p>
+        When I was 11, I discovered a program to create my own computer games. With it came a simple language that was perfect for beginners like me.
+        From there, I taught myself Java in order to mod my Minecraft server, and thus the snowball started rolling.
+      </p>
+      <p>
+        If you're looking to get started with programming, I recommend beginning with
+        <a href="https://www.python.org/downloads/" target="_blank">Python</a>
+        because of its simple syntax. I also recommend checking out
+        <hw-link
+          isExternal="true"
+          destination="https://www.amazon.com/Python-Programming-Introduction-Computer-Science/dp/1590282752"
+          display="this book"></hw-link>
+        to get you started! #NotSponsored
+      </p>
+    </app-accordion>
+    <app-accordion title="What are you passionate about?">
+      <p class="my-2">
+        I'm a major privacy advocate - educating others on ways to protect their digital privacy is a personal goal of mine, and I'm afraid that we're
+        seeing privacy rights disappearing each day.
+      </p>
+      <p class="my-2">I'm also a big proponent of digital security, and I encourage everyone I meet to ensure their data is safe on the Internet.</p>
+      <p class="my-2">
+        Lastly, advertising is one of my biggest pet peeves, and I make lots of decisions based on ads alone. I much prefer to pay for a service
+        that's ad-free than to click through pop-ups or sell my data.
+      </p>
+
+      <p>Here are some great resources to learn more:</p>
+      <hw-link isExternal="true" destination="https://brianlovin.com/security" display="Security Checklist"></hw-link>
+      <hw-link isExternal="true" destination="https://www.thinkprivacy.ch/checklist" display="Privacy Checklist"></hw-link>
+      <hw-link isExternal="true" destination="https://restoreprivacy.com/google-alternatives" display="Google Product Alternatives"></hw-link>
+    </app-accordion>
+    <app-accordion title="Dream Job?">
+      <p>
+        I would love to work in a software engineering or architectural role at a company that shares my values for privacy and inclusive design.
+        There are a few large tech companies out there who make this a priority, and my goal is to someday have the opportunity to work at one of
+        them.
+      </p>
+    </app-accordion>
+    <app-accordion title="Tell me about your website!">
+      <p>
+        This website was fully designed by me. It's been an ongoing personal project for years, and it has undergone several redesigns during the
+        process.
+      </p>
+      <p>The current version is using Angular 12 with TailwindCSS 3, and it is hosted by Github Pages.</p>
+    </app-accordion>
+    <app-accordion title="Mac or PC?">
+      <p>The short answer: Yes.</p>
+      <p>
+        The slightly longer answer: I own both, and I think both have their strengths and weaknesses. It's all about using the right tool for the job,
+        and how easily you want to accomplish the task. I love my Mac, I've built my own PC, and I use both pretty regularly.
+      </p>
+    </app-accordion>
+    <app-accordion title="Android or iOS?">
+      <p>
+        Right now, I use iOS for most of my daily tasks. However, I occasionally switch to Android to stay afloat in the ever-changing smartphone
+        world.
+      </p>
+    </app-accordion>
+    <app-accordion title="Describe your personality!">
+      <p>I'm an INTJ on the Myers-Briggs scale, and my Enneagram is a 5 wing-6.</p>
+    </app-accordion>
+    <app-accordion title="Favorite Anime?">
+      <ul class="list-disc pl-4">
+        <li>Fullmetal Alchemist: Brotherhood</li>
+        <li>The Promised Neverland (Season 1)</li>
+        <li>My Hero Academia</li>
+      </ul>
+    </app-accordion>
+    <app-accordion title="Favorite Video Games?">
+      <ul class="list-disc pl-4">
+        <li>
+          The Legend of Zelda series
+          <ul class="ml-4 list-disc">
+            <li>Breath of the Wild</li>
+            <li>Minish Cap</li>
+            <li>Ocarina of Time</li>
+            <li>Twilight Princess</li>
+          </ul>
+        </li>
+        <li>Minecraft: Java Edition</li>
+        <li>Portal 2</li>
+        <li>Hades</li>
+      </ul>
+    </app-accordion>
+    <app-accordion title="Do you take app requests?">
+      <p>
+        Unfortunately, I can't commit extra time to building new projects right now. However, having an exciting idea for a project is a great way to
+        begin your own programming journey! The task may seem daunting, but with enough practice, programming can be both easy and fun. Give it a try!
+      </p>
+    </app-accordion>
+    <app-accordion title="Can I follow you on social media?">
+      <p>Thank you for your interest! Unfortunately, I'm not a big social media user, so I don't have any accounts or pages to share.</p>
+      <p>
+        If you are interested in professional connections, I have some links available on the
+        <hw-link destination="contact" display="Contact"></hw-link>
+        page, so please feel free to check them out!
+      </p>
+    </app-accordion>
+
+    <hr class="w-9/12 mx-auto my-4 dark:border-gray-800" />
+
+    <p class="text-sm">
+      Can't find the answer you're looking for? Feel free to
+      <hw-link destination="contact" display="get in touch"></hw-link>
+      !
+    </p>
+  </hw-bubble>
 </div>
