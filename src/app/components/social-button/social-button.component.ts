@@ -10,8 +10,5 @@ export class SocialButtonComponent {
   @Input() color: string = 'bg-blue-300';
   @Input() link: string = '#';
   @Input() title: string = 'A button';
-
-  openLink() {
-    window.open(this.link, '_blank');
-  }
+  @Input() blank: boolean = true;
 }
