@@ -1,9 +1,0 @@
-<div *ngIf="destination && display" class="inline-block hover:bg-gray-300 hover:bg-opacity-20 rounded-md px-1">
-    <a *ngIf="!isExternal" [routerLink]="['/'+destination]" class="inline-block font-semibold">
-        {{display}}
-    </a>
-    <a *ngIf="isExternal" href="{{destination}}" target="_blank" class="inline-block font-semibold">
-        {{display}}
-        <i class="fa-solid fa-up-right-from-square p-1 pl-0 text-xs align-top"></i>
-    </a>
-</div>
