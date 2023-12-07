@@ -7,7 +7,8 @@
       title="Site logo" />
     <h1 class="font-game text-2xl md:text-3xl mt-3">Hi, I'm Haden</h1>
     <hr class="border-gray-600 border-b-2 my-6 mx-auto max-w-[90%] md:max-w-full" />
-    <div class="text-center bg-gray-100 rounded-md shadow-sm py-7 px-1 my-8 md:mb-4">
+
+    <div class="text-center bg-gray-100 rounded-md shadow-sm py-7 my-8 md:mb-4">
       <app-social-button
         icon="fa-brands fa-linkedin"
         color="bg-red-700"
@@ -20,51 +21,60 @@
         link="mailto:hello@hadenwatne.com"
         title="Email"
         [blank]="false"></app-social-button>
+      <br class="md:hidden" />
       <app-social-button
         icon="fa-solid fa-award"
         color="bg-green-600"
         link="https://www.credly.com/users/haden-watne/badges"
-        title="Certifications"></app-social-button>
+        title="Credentials"></app-social-button>
       <app-social-button
         icon="fa-brands fa-stack-overflow"
         color="bg-sky-600"
         link="https://stackoverflow.com/users/15302833/hwdev?tab=profile"
-        title="Stack Overflow"></app-social-button>
+        title="StackOverflow"></app-social-button>
       <app-social-button
         icon="fa-regular fa-file"
         color="bg-violet-800"
         link="../../../assets/file/haden_watne_resume.pdf"
         title="Resume"></app-social-button>
     </div>
+
     <div>
       <app-hangar title="Who I Am" tagline="" color="bg-sky-600" class="block md:inline-block my-5">
         <ul>
           <li>Full-Stack Software Engineer</li>
-          <li>Web Developer</li>
           <li>Coffee Connoisseur</li>
           <li>Amateur Hiker</li>
-          <li>Tabletop Gamer</li>
           <li>Privacy Advocate</li>
-          <li>Aspiring Designer</li>
         </ul>
+        <div class="my-2 text-3xl text-gray-700">
+          <i class="mx-2 fa-solid fa-dice-d20"></i>
+          <i class="mx-2 fa-solid fa-tree"></i>
+          <i class="mx-2 fa-solid fa-dumbbell"></i>
+          <i class="mx-2 fa-solid fa-music"></i>
+          <i class="mx-2 fa-solid fa-mug-hot"></i>
+          <i class="mx-2 fa-solid fa-gamepad"></i>
+        </div>
       </app-hangar>
       <app-hangar title="What I Know" tagline="" color="bg-sky-600" class="block md:inline-block my-5">
         <ul class="columns-2">
           <li>Agile</li>
-          <li>Angular</li>
-          <li>C#</li>
           <li>CI/CD</li>
           <li>Dependency Injection</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>Python</li>
           <li>ReactiveX</li>
           <li>Redux</li>
           <li>Splunk</li>
-          <li>SQL</li>
-          <li>Typescript</li>
+          <li>Quantum Metric</li>
           <li>Version Control</li>
         </ul>
+        <div class="my-2 text-3xl text-gray-700">
+          <i class="mx-2 fa-brands fa-angular"></i>
+          <i class="mx-2 fa-brands fa-java"></i>
+          <i class="mx-2 fa-brands fa-js"></i>
+          <i class="mx-2 fa-brands fa-python"></i>
+          <i class="mx-2 fa-solid fa-code"></i>
+          <i class="mx-2 fa-solid fa-database"></i>
+        </div>
       </app-hangar>
     </div>
   </div>

@@ -1,10 +1,12 @@
-<a
-  class="inline-block m-1 md:mx-3 p-3 md:p-4 h-12 w-12 md:h-16 md:w-16 text-white text-2xl md:text-3xl rounded-md shadow-md {{
-    color
-  }} hover:brightness-90 active:hover:brightness-75"
-  title="{{ title }}"
-  name="{{ title }}"
-  href="{{ link }}"
-  target="{{ blank ? '_blank' : '_self' }}">
-  <i class="{{ icon }}"></i>
-</a>
+<div class="inline-block">
+  <a
+    class="inline-block m-3 p-4 h-16 w-16 text-white text-3xl rounded-md shadow-md {{ color }} hover:brightness-90 active:hover:brightness-75"
+    title="{{ title }}"
+    name="{{ title }}"
+    href="{{ link }}"
+    target="{{ blank ? '_blank' : '_self' }}">
+    <i class="{{ icon }}"></i>
+  </a>
+  <br />
+  <label class="text-xs hidden md:block">{{ title }}</label>
+</div>
