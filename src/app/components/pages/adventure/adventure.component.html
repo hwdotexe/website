@@ -1,0 +1,18 @@
+<div class="text-center text-gray-800 dark:text-gray-300">
+  <div class="p-5 bg-gray-100 dark:bg-gray-900 rounded-md shadow-md">
+    <h1 class="mb-2 font-game text-2xl md:text-3xl">A random encounter!</h1>
+    <hr class="border-gray-600 border-b-2 my-6 mx-auto max-w-[90%] md:max-w-full" />
+
+    <div *ngFor="let step of unlockedSteps">
+      <p class="text-sm my-3 max-w-[85%] mx-auto">
+        {{ step.label }}
+      </p>
+      <button
+        class="font-body py-2 px-3 my-3 mr-2 rounded-md shadow-md text-gray-100 bg-gray-600 hover:bg-gray-700 active:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-800 dark:active:bg-gray-950"
+        *ngFor="let b of step.buttons"
+        (click)="advanceStep(step, b.actionID)">
+        {{ b.label }}
+      </button>
+    </div>
+  </div>
+</div>

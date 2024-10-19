@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-social-button',
+  standalone: true,
+  imports: [],
   templateUrl: './social-button.component.html',
   styleUrls: ['./social-button.component.css']
 })
