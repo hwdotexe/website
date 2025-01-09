@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Subject, take, takeUntil } from 'rxjs';
+import { AdventureButton } from '../../../models/adventure-button.interface';
+import { AdventureItem } from '../../../models/adventure-item.interface';
 import { AdventureStep } from '../../../models/adventure-step.interface';
 import { AdventureService } from '../../../services/adventure-service/adventure.service';
 import { LoadingService } from '../../../services/loading-service/loading.service';
@@ -16,13 +18,19 @@ import { LoadingService } from '../../../services/loading-service/loading.servic
 export class AdventureComponent implements OnInit, OnDestroy {
   steps: AdventureStep[];
   unlockedSteps: AdventureStep[];
+  items: AdventureItem[];
+  unlockedItems: AdventureItem[];
 
   isLoading$: BehaviorSubject<boolean>;
   unsubscribe$ = new Subject<void>();
 
+  stepsToShow = 3;
+
   constructor(private router: Router, private adventureService: AdventureService, private loadingService: LoadingService) {
     this.steps = [];
     this.unlockedSteps = [];
+    this.items = [];
+    this.unlockedItems = [];
     this.isLoading$ = this.loadingService.isLoading$;
   }
 
@@ -30,9 +38,11 @@ export class AdventureComponent implements OnInit, OnDestroy {
     this.adventureService
       .fetchAdventures$()
       .pipe(take(1), takeUntil(this.unsubscribe$))
-      .subscribe(steps => {
-        this.steps = steps;
-        this.unlockedSteps.push(steps[0]);
+      .subscribe(model => {
+        this.steps = model.steps;
+        this.items = model.items;
+
+        this.pushStep(model.steps[0].stepID);
       });
   }
 
@@ -41,37 +51,69 @@ export class AdventureComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  advanceStep(
-    currentStep: AdventureStep,
-    button: {
-      label: string;
-      stepID: string;
-      route?: string;
-    }
-  ) {
+  advanceStep(currentStep: string, button: AdventureButton) {
     if (!!button.route) {
       this.router.navigate([button.route]);
     } else {
-      var nextStep = structuredClone(this.steps.find(s => s.stepID === button.stepID));
+      this.pushSelfMessage(button.label);
 
-      if (nextStep) {
-        currentStep.buttons = [];
+      if (button.inventory?.requires) {
+        for (var requiredItem of button.inventory.requires) {
+          if (!this.unlockedItems.find(ui => ui.itemID === requiredItem.itemID)) {
+            this.pushSelfMessage(requiredItem.error);
+            this.pushStep(currentStep);
 
-        this.unlockedSteps.push({
-          stepID: '',
-          label: button.label,
-          self: true,
-          buttons: []
-        });
-
-        setTimeout(() => {
-          this.unlockedSteps.push(nextStep!);
-
-          setTimeout(() => {
-            window.scrollTo(0, document.body.scrollHeight);
-          }, 100);
-        }, 1000);
+            return;
+          }
+        }
       }
+
+      if (button.inventory?.add) {
+        for (var addItem of button.inventory.add) {
+          if (!this.unlockedItems.find(ui => ui.itemID === addItem)) {
+            var newItem = this.items.find(ni => ni.itemID === addItem);
+
+            if (newItem) {
+              this.unlockedItems.push(newItem);
+            }
+          }
+        }
+      }
+
+      if (button.inventory?.remove) {
+        for (var removeItem of button.inventory.remove) {
+          var oldItem = this.unlockedItems.find(ui => ui.itemID === removeItem);
+
+          if (oldItem) {
+            this.unlockedItems.splice(this.unlockedItems.indexOf(oldItem), 1);
+          }
+        }
+      }
+
+      this.pushStep(button.stepID);
+    }
+  }
+
+  private pushSelfMessage(message: string) {
+    this.unlockedSteps.push({
+      stepID: '',
+      label: message,
+      self: true,
+      buttons: []
+    });
+  }
+
+  private pushStep(stepID: string) {
+    var nextStep = structuredClone(this.steps.find(s => s.stepID === stepID));
+
+    if (nextStep) {
+      setTimeout(() => {
+        this.unlockedSteps.push(nextStep!);
+
+        if (this.unlockedSteps.length > this.stepsToShow) {
+          this.unlockedSteps.splice(0, this.unlockedSteps.length - this.stepsToShow);
+        }
+      }, 1000);
     }
   }
 }

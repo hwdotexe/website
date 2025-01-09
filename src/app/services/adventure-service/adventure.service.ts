@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, take } from 'rxjs';
-import { AdventureStep } from '../../models/adventure-step.interface';
+import { AdventureModel } from '../../models/adventure-model.interface';
 import { HTTPService } from '../http-service/http.service';
 
 @Injectable({
@@ -9,8 +9,8 @@ import { HTTPService } from '../http-service/http.service';
 export class AdventureService {
   constructor(private httpService: HTTPService) {}
 
-  fetchAdventures$(): Observable<AdventureStep[]> {
-    return this.httpService.GET<AdventureStep[]>('../../../assets/media/adventure.json').pipe(
+  fetchAdventures$(): Observable<AdventureModel> {
+    return this.httpService.GET<AdventureModel>('../../../assets/media/adventure.json').pipe(
       take(1),
       map(adventure => adventure.body!),
       catchError(() => [])
