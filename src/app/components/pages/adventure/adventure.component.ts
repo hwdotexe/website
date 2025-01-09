@@ -56,7 +56,21 @@ export class AdventureComponent implements OnInit, OnDestroy {
 
       if (nextStep) {
         currentStep.buttons = [];
-        this.unlockedSteps.push(nextStep);
+
+        this.unlockedSteps.push({
+          stepID: '',
+          label: button.label,
+          self: true,
+          buttons: []
+        });
+
+        setTimeout(() => {
+          this.unlockedSteps.push(nextStep!);
+
+          setTimeout(() => {
+            window.scrollTo(0, document.body.scrollHeight);
+          }, 100);
+        }, 1000);
       }
     }
   }

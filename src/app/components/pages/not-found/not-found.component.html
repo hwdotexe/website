@@ -1,13 +1,19 @@
 <div class="flex justify-center items-center text-center min-h-screen text-gray-800 dark:text-gray-300">
-  <div class="p-3">
-    <h1 class="font-game text-4xl mt-3">Lost in the forest</h1>
+  <div class="p-5 rounded-md shadow-md bg-white dark:bg-gray-900">
+    <h1 class="font-legend text-4xl mt-3 ani">404</h1>
+    <h1 class="font-legend text-5xl mt-3 ani">Lost in the forest</h1>
     <hr class="border-gray-600 border-b-2 my-6 mx-auto max-w-[90%] md:max-w-full" />
-    <p class="italic py-2">The link you just tried to visit has sent you down a dark forest path. It's uncertain how to get home from here.</p>
+    <p class="font-story text-lg py-2">During your adventure, you got lost wandering down an unmarked path. A decision lies before you.</p>
 
     <a
+      [routerLink]="['/']"
+      class="inline-block p-3 my-6 mx-1 rounded-md text-gray-50 font-bold bg-ltDeepSky-100 hover:bg-ltDeepSky-200 active:bg-ltDeepSky-300">
+      Back to Home
+    </a>
+    <a
       [routerLink]="['/adventure']"
-      class="block p-3 my-6 rounded-md bg-gray-700 text-gray-100 hover:bg-gray-800 active:bg-gray-900 dark:bg-gray-900 dark:hover:bg-gray-950 dark:text-gray-200">
-      Search for a way home
+      class="inline-block p-3 my-6 mx-1 rounded-md text-gray-50 font-bold bg-ltShamrock-100 hover:bg-ltShamrock-200 active:bg-ltShamrock-300">
+      Go Exploring
     </a>
   </div>
 </div>
