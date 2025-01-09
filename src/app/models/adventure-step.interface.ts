@@ -3,6 +3,7 @@ export interface AdventureStep {
   label: string;
   buttons: {
     label: string;
-    actionID: string;
+    stepID: string;
+    route?: string;
   }[];
 }
