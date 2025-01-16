@@ -1,198 +1,394 @@
 {
   "steps": [
     {
-      "stepID": "initial_step",
-      "label": "While you were browsing the web, you stumbled down a dark forest path. Your phone is out of battery, so your GPS and flashlight app are of no use. What do you do?",
+      "stepID": "0_initial",
+      "label": "You find yourself in an old, musky cellar room.",
+      "buttons": [
+        { "label": "How'd I get here?", "stepID": "0_gethere", "route": "" },
+        { "label": "What's that smell?", "stepID": "0_smell", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_gethere",
+      "label": "You remember your grandfather, owner of the town mercantile, asked you to retrieve something for him.",
+      "buttons": [
+        { "label": "What does he need?", "stepID": "0_whatneeded", "route": "" },
+        { "label": "Start looking", "stepID": "1_investigateitem", "route": "" },
+        { "label": "Wouldn't I remember that?", "stepID": "0_rememberthat", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_smell",
+      "label": "The dank and humid cellar reeks of dusty wooden boxes, mildew, and sea water.",
+      "buttons": [
+        { "label": "No, there's definitely a weird smell", "stepID": "2_investigatesmell", "route": "" },
+        { "label": "Explore surroundings", "stepID": "1_investigateitem", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_whatneeded",
+      "label": "A strange shipment arrived yesterday evening. Included in the assortment of packages was a small brown leather box.",
+      "buttons": [
+        { "label": "Who sent the shipment?", "stepID": "0_whosent", "route": "" },
+        { "label": "What's in the box?", "stepID": "0_boxlocked", "route": "" },
+        { "label": "Why was this shipment \"strange?\"", "stepID": "0_whosent", "route": "" },
+        {
+          "label": "Try to open the box",
+          "stepID": "4_openbox",
+          "route": "",
+          "inventory": {
+            "add": [],
+            "remove": ["leatherboxkey"],
+            "requires": [{ "itemID": "leatherboxkey", "error": "You need a key to open this box!" }]
+          }
+        }
+      ]
+    },
+    {
+      "stepID": "0_rememberthat",
+      "label": "You would. Which is why the unexplainable loss of time is suspicious.",
+      "buttons": [
+        { "label": "Do I feel okay?", "stepID": "0_feelokay", "route": "" },
+        { "label": "Something seems off", "stepID": "0_seemsoff", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_whosent",
+      "label": "Nobody knows why the shipment arrived, nor who it was from. But it was addressed to your grandfather.",
+      "buttons": [
+        { "label": "Does that explain the smell?", "stepID": "0_smell", "route": "" },
+        { "label": "Look for clues about the sender", "stepID": "3_investigatesender", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_boxlocked",
+      "label": "Among the dusty and drab containers, the leather box is ornate and clean. However, it is locked tight.",
+      "buttons": [
+        { "label": "Look for a way to unlock it", "stepID": "1_investigateitem", "route": "" },
+        { "label": "Examine what that smell is", "stepID": "2_investigatesmell", "route": "" },
+        { "label": "Where did it come from?", "stepID": "0_whosent", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_feelokay",
+      "label": "Your head feels a bit foggy, as if you've been dazing.",
+      "buttons": [
+        { "label": "Am I breathing fumes?", "stepID": "2_investigatesmell", "route": "" },
+        { "label": "Clear my head and start again", "stepID": "0_initial", "route": "" }
+      ]
+    },
+    {
+      "stepID": "0_seemsoff",
+      "label": "It would seem as though there is more in this room than what meets the eye.",
+      "buttons": [
+        { "label": "Explore the room", "stepID": "1_investigateitem", "route": "" },
+        { "label": "What does grandfather need?", "stepID": "0_whatneeded", "route": "" }
+      ]
+    },
+    {
+      "stepID": "2_investigatesmell",
+      "label": "You concentrate on the air around you, and something almost smells burnt.",
+      "buttons": [
+        { "label": "Check for smoke", "stepID": "2_checksmoke", "route": "" },
+        { "label": "Look for anything charred", "stepID": "2_checkcharred", "route": "" },
+        { "label": "Search for water", "stepID": "2_grabbucket", "route": "", "inventory": { "add": ["waterbucket"], "remove": [], "requires": [] } }
+      ]
+    },
+    {
+      "stepID": "2_checksmoke",
+      "label": "You don't see any smoke billowing, but it certainly smells as though there has been some smoke here recently.",
+      "buttons": [
+        { "label": "Look for soot", "stepID": "2_checksoot", "route": "" },
+        { "label": "Look for anything too warm", "stepID": "2_checkwarm", "route": "" }
+      ]
+    },
+    {
+      "stepID": "2_checkcharred",
+      "label": "You search the room for charred boxes, and in fact, there is one charred crate in the corner.",
+      "buttons": [
+        { "label": "Open the crate", "stepID": "2_openbox", "route": "" },
+        {
+          "label": "Douse the box (just to be safe)",
+          "stepID": "2_dousebox",
+          "route": "",
+          "inventory": {
+            "add": [],
+            "remove": ["waterbucket"],
+            "requires": [{ "itemID": "waterbucket", "error": "You don't have any water to use!" }]
+          }
+        }
+      ]
+    },
+    {
+      "stepID": "2_openbox",
+      "label": "You pry the top of the crate open, and it is full of warm embers of coal.",
+      "buttons": [
+        { "label": "This seems dangerous!", "stepID": "2_boxonfire", "route": "" },
+        { "label": "Is the crate safe?", "stepID": "2_boxonfire", "route": "" }
+      ]
+    },
+    {
+      "stepID": "2_checksoot",
+      "label": "Along the far wall in the corner, there is a column of soot above a wooden crate.",
+      "buttons": [
+        { "label": "Open the crate", "stepID": "2_openbox", "route": "" },
+        {
+          "label": "Douse the box (just to be safe)",
+          "stepID": "2_dousebox",
+          "route": "",
+          "inventory": {
+            "add": [],
+            "remove": ["waterbucket"],
+            "requires": [{ "itemID": "waterbucket", "error": "You don't have any water to use!" }]
+          }
+        }
+      ]
+    },
+    {
+      "stepID": "2_checkwarm",
+      "label": "Placing your hand on each item in the cellar, you eventually find one crate that feels warmer than the others.",
+      "buttons": [
+        { "label": "Open the crate", "stepID": "2_openbox", "route": "" },
+        {
+          "label": "Douse the box (just to be safe)",
+          "stepID": "2_dousebox",
+          "route": "",
+          "inventory": {
+            "add": [],
+            "remove": ["waterbucket"],
+            "requires": [{ "itemID": "waterbucket", "error": "You don't have any water to use!" }]
+          }
+        }
+      ]
+    },
+    {
+      "stepID": "2_boxonfire",
+      "label": "The hungry warm embers come to life in the open air, and the crate is set aflame.",
       "buttons": [
         {
-          "label": "Call out for help",
-          "stepID": "1_call_out"
+          "label": "Douse the flames",
+          "stepID": "2_dousebox",
+          "route": "",
+          "inventory": {
+            "add": [],
+            "remove": ["waterbucket"],
+            "requires": [{ "itemID": "waterbucket", "error": "You don't have any water to use!" }]
+          }
         },
-        {
-          "label": "Listen for sounds",
-          "stepID": "1_listen"
-        }
+        { "label": "Let the box burn", "stepID": "2_letboxburn", "route": "" }
       ]
     },
     {
-      "stepID": "1_call_out",
-      "label": "You call out into the thick forest. \"Hello?\" Not so much as an echo for a reply.",
+      "stepID": "2_dousebox",
+      "label": "You use your bucket to cover the crate in water. You feel much safer now.",
+      "buttons": [{ "label": "Dig inside the crate", "stepID": "2_diginside", "route": "" }]
+    },
+    {
+      "stepID": "2_letboxburn",
+      "label": "You feel mesmerized as the box before you burns to cinders. ",
+      "buttons": [{ "label": "Examine the ashes", "stepID": "2_examineashes", "route": "" }]
+    },
+    {
+      "stepID": "2_grabbucket",
+      "label": "You find a bucket of water near the door of the cellar, and take it in hand.",
       "buttons": [
-        {
-          "label": "Yell again",
-          "stepID": "2_yell_louder"
-        }
+        { "label": "Check for smoke", "stepID": "2_checksmoke", "route": "" },
+        { "label": "Look for anything charred", "stepID": "2_checkcharred", "route": "" }
       ]
     },
     {
-      "stepID": "1_listen",
-      "label": "You steady your breathing and listen for any sounds to guide your path. The forest is quiet and peaceful, and you don't hear anything.",
+      "stepID": "2_diginside",
+      "label": "Inside the crate, several pounds of warm coals have been doused with water. You sift through these coals and find a key.",
       "buttons": [
-        {
-          "label": "Yell for help",
-          "stepID": "1_call_out"
-        }
+        { "label": "Take the key", "stepID": "2_takekey", "route": "", "inventory": { "add": ["leatherboxkey"], "remove": [], "requires": [] } },
+        { "label": "What is this for?", "stepID": "2_takekey", "route": "", "inventory": { "add": ["leatherboxkey"], "remove": [], "requires": [] } }
       ]
     },
     {
-      "stepID": "2_yell_louder",
-      "label": "The dense thicket you find yourself in swallows up your calls for help. It looks like you will need to find your way home some other way.",
+      "stepID": "2_takekey",
+      "label": "Taking the key, you realize it might open a mysterious box in the cellar.",
       "buttons": [
         {
-          "label": "Check your pockets",
-          "stepID": "3_check_pockets"
+          "label": "Open the Mysterious Box",
+          "stepID": "4_openbox",
+          "route": "",
+          "inventory": {
+            "add": [],
+            "remove": ["leatherboxkey"],
+            "requires": [{ "itemID": "leatherboxkey", "error": "You need a key to open this box!" }]
+          }
         },
+        { "label": "Which box is that, again?", "stepID": "0_whatneeded", "route": "" }
+      ]
+    },
+    {
+      "stepID": "2_examineashes",
+      "label": "Among the ashes of the crate, you find an ornate key.",
+      "buttons": [
+        { "label": "Take the key", "stepID": "2_takekey", "route": "", "inventory": { "add": ["leatherboxkey"], "remove": [], "requires": [] } },
+        { "label": "What is this for?", "stepID": "2_takekey", "route": "", "inventory": { "add": ["leatherboxkey"], "remove": [], "requires": [] } }
+      ]
+    },
+    {
+      "stepID": "4_openbox",
+      "label": "You've reached the end of this story... for now!",
+      "buttons": [{ "label": "Back to home", "stepID": "", "route": "/" }]
+    },
+    {
+      "stepID": "1_investigateitem",
+      "label": "Inside the cellar, you find several dusty boxes, an oil lantern by the door, a bucket of water, and an ornate leather box.",
+      "buttons": [
+        { "label": "Grab the lantern", "stepID": "1_takelantern", "route": "", "inventory": { "add": ["lantern"], "remove": [], "requires": [] } },
+        { "label": "Grab the water", "stepID": "1_takewater", "route": "", "inventory": { "add": ["waterbucket"], "remove": [], "requires": [] } },
+        { "label": "Investigate the box", "stepID": "1_investigatebox", "route": "" }
+      ]
+    },
+    {
+      "stepID": "1_takelantern",
+      "label": "The lantern comes off the wall easily, with a handle that makes it easy to hold. Its light bathes the cellar walls.",
+      "buttons": [{ "label": "Observe the room", "stepID": "1_observeroom", "route": "" }]
+    },
+    {
+      "stepID": "1_takewater",
+      "label": "You take hold of a bucket of water. If a fire or a wicked witch broke out, you'll be ready.",
+      "buttons": [
+        { "label": "Good idea, look for fires", "stepID": "1_lookforfires", "route": "" },
+        { "label": "Succumb to the impulse to splash it on the walls", "stepID": "1_splash", "route": "" }
+      ]
+    },
+    {
+      "stepID": "1_investigatebox",
+      "label": "This small leather box fits in your hand. Its brown hide is finished with a fine golden trim. On the front, the clasp is sealed shut with a lock.",
+      "buttons": [
+        { "label": "Shake the box", "stepID": "1_shakebox", "route": "" },
+        { "label": "Try to force the lock open", "stepID": "1_forceopen", "route": "" }
+      ]
+    },
+    {
+      "stepID": "1_observeroom",
+      "label": "Holding the lantern, you move around the cellar. Shadows dance along the walls.",
+      "buttons": [
+        { "label": "Look at the shadows", "stepID": "1_lookshadows", "route": "" },
+        { "label": "Look at the reflections", "stepID": "1_lookreflections", "route": "" }
+      ]
+    },
+    {
+      "stepID": "1_lookforfires",
+      "label": "To your wild surprise, nothing seems to be on fire. Though there is a faint scent of soot...",
+      "buttons": [
+        { "label": "Search for smoke", "stepID": "2_checksmoke", "route": "" },
+        { "label": "Look for anything charred", "stepID": "2_checkcharred", "route": "" }
+      ]
+    },
+    {
+      "stepID": "1_shakebox",
+      "label": "Box in hand, you rattle it gently to get a clue about its contents. The box, however, is dead silent.",
+      "buttons": [{ "label": "Throw the box at the wall", "stepID": "1_throwatwall", "route": "" }]
+    },
+    {
+      "stepID": "1_forceopen",
+      "label": "You do your best to pry open the box, but the hinges and clasp remain firmly in place.",
+      "buttons": [{ "label": "Throw the box at the wall", "stepID": "1_investigatewall", "route": "" }]
+    },
+    {
+      "stepID": "1_splash",
+      "label": "You make it rain, hurling the water onto the far wall; however, the water goes straight through.",
+      "buttons": [{ "label": "Investigate the wall", "stepID": "1_investigatewall", "route": "" }]
+    },
+    {
+      "stepID": "1_lookshadows",
+      "label": "You move the lantern and watch the shadows its light creates. You notice that along the far wall, no shadows appear.",
+      "buttons": [{ "label": "Investigate the wall", "stepID": "1_investigatewall", "route": "" }]
+    },
+    {
+      "stepID": "1_lookreflections",
+      "label": "You look at the few shiny objects in the room and observe the reflections they show. One of the walls in the room is missing in one of them.",
+      "buttons": [{ "label": "Investigate the wall", "stepID": "1_investigatewall", "route": "" }]
+    },
+    {
+      "stepID": "1_throwatwall",
+      "label": "Hurling the box at the wall, to your surprise, the box floats right through.",
+      "buttons": [
+        { "label": "Investigate the wall", "stepID": "1_investigatewall", "route": "" },
+        { "label": "Retrieve the box", "stepID": "1_investigatewall", "route": "" }
+      ]
+    },
+    {
+      "stepID": "1_investigatewall",
+      "label": "Pressing your hand on the surface, it slips right through as if the wall was made of air. It seems this wall is a trick.",
+      "buttons": [
+        { "label": "Step through the wall", "stepID": "1_stepthroughwall", "route": "" },
         {
-          "label": "Check your surroundings",
-          "stepID": "3_check_surroundings"
+          "label": "Reach a hand through the wall",
+          "stepID": "1_reachhandthrough",
+          "route": "",
+          "inventory": { "add": [], "remove": [], "requires": [] }
         }
       ]
     },
     {
-      "stepID": "3_check_pockets",
-      "label": "Resigning to check your pockets for tools, your hand bumps into an object on your waist. It's a Sony Walkman cassette player.",
+      "stepID": "1_stepthroughwall",
+      "label": "You step through the wall, and you find a sturdy oak door locked with a large keyhole. To the side, a very small key.",
       "buttons": [
-        {
-          "label": "Press Play",
-          "stepID": "4_listen"
-        },
-        {
-          "label": "Inspect the device",
-          "stepID": "4_inspect"
-        }
+        { "label": "Try opening the door with the key", "stepID": "1_trydoor", "route": "" },
+        { "label": "Open the box with the key", "stepID": "4_openbox", "route": "", "inventory": { "add": [], "remove": [], "requires": [] } }
       ]
     },
     {
-      "stepID": "3_check_surroundings",
-      "label": "You extend your arms in front of you and begin searching your surroundings. Your hand wraps around something around. It's a bicycle horn.",
+      "stepID": "1_reachhandthrough",
+      "label": "You reach your hand through the wall, and you grab hold of a small key.",
       "buttons": [
-        {
-          "label": "Squeak the horn",
-          "stepID": "4_squeak"
-        },
-        {
-          "label": "Take the horn apart",
-          "stepID": "4_take_apart"
-        }
+        { "label": "Open the box with the key", "stepID": "4_openbox", "route": "", "inventory": { "add": [], "remove": [], "requires": [] } }
       ]
     },
     {
-      "stepID": "4_listen",
-      "label": "The cassette player clicks on. You start to hear static noise coming through the headphones. It's a bit disappointing, maybe this tape is damaged?",
+      "stepID": "1_trydoor",
+      "label": "Unfortunately, the key is too small for this lock.",
       "buttons": [
-        {
-          "label": "Open the Sony Walkman",
-          "stepID": "4_open"
-        },
-        {
-          "label": "Keep listening",
-          "stepID": "4_keep_listening"
-        }
+        { "label": "Open the box with the key instead", "stepID": "4_openbox", "route": "", "inventory": { "add": [], "remove": [], "requires": [] } }
       ]
     },
     {
-      "stepID": "4_inspect",
-      "label": "A relic of the ancient past, this device could play sounds stored on a long strip of magnetic tape. People would use this to play music before streaming was invented.",
+      "stepID": "3_investigatesender",
+      "label": "You examine the crates within the room for indications of who sent them.",
       "buttons": [
-        {
-          "label": "Listen to the tape",
-          "stepID": "4_listen"
-        },
-        {
-          "label": "See what else is around here",
-          "stepID": "3_check_surroundings"
-        }
+        { "label": "Look for a manifest", "stepID": "3_searchmanifest", "route": "" },
+        { "label": "Look for dropped clues", "stepID": "3_droppedclues", "route": "" }
       ]
     },
     {
-      "stepID": "4_squeak",
-      "label": "The horn makes an amusing \"honk\" sound when you squeak it. It reminds you of circus clowns and elephants, though you aren't sure why.",
+      "stepID": "3_searchmanifest",
+      "label": "It takes some time to look through the shipment, but you eventually find what looks like a receipt.",
+      "buttons": [{ "label": "Examine receipt", "stepID": "3_examinereceipt", "route": "" }]
+    },
+    {
+      "stepID": "3_droppedclues",
+      "label": "One of the other crates has a note that's been slashed in half.",
+      "buttons": [{ "label": "Read the note", "stepID": "3_readnote", "route": "" }]
+    },
+    {
+      "stepID": "3_examinereceipt",
+      "label": "The receipt has been torn in half, revealing only a list of goods.",
       "buttons": [
-        {
-          "label": "Honk the horn again",
-          "stepID": "4_squeak"
-        },
-        {
-          "label": "Take the horn apart",
-          "stepID": "4_take_apart"
-        }
+        { "label": "Search for \"dragonfire cinders\"", "stepID": "2_checkwarm", "route": "" },
+        { "label": "Search for \"incorporial wall\"", "stepID": "3_searchwall", "route": "" },
+        { "label": "Search for the other half of the receipt", "stepID": "3_droppedclues", "route": "" }
       ]
     },
     {
-      "stepID": "4_take_apart",
-      "label": "You take the horn apart. Inside the billows, you find a whistle.",
-      "buttons": [
-        {
-          "label": "Blow the whistle",
-          "stepID": "5_blow_whistle"
-        },
-        {
-          "label": "Check your pockets instead",
-          "stepID": "3_check_pockets"
-        }
-      ]
+      "stepID": "3_searchwall",
+      "label": "The term \"incorporial wall\" seems too suspicious to ignore. You start checking the four walls of the cellar, and one of them appears to shimmer.",
+      "buttons": [{ "label": "Investigate the wall", "stepID": "1_investigatewall", "route": "" }]
     },
     {
-      "stepID": "4_open",
-      "label": "You open the Sony Walkman, and you find an unmarked cassette tape. It was playing the B-side.",
-      "buttons": [
-        {
-          "label": "Try the A-side",
-          "stepID": "4_keep_listening"
-        }
-      ]
-    },
-    {
-      "stepID": "4_keep_listening",
-      "label": "The static continues to play. Suddenly, a slow and raspy voice breaks through. \"Lost... click... forest...\"",
-      "buttons": [
-        {
-          "label": "Keep listening",
-          "stepID": "5_keep_listening"
-        }
-      ]
-    },
-    {
-      "stepID": "5_keep_listening",
-      "label": "\"rewind... leave...\"",
-      "buttons": [
-        {
-          "label": "Press the Rewind button",
-          "stepID": "5_rewind"
-        }
-      ]
-    },
-    {
-      "stepID": "5_blow_whistle",
-      "label": "You blow the whistle. Suddenly, the path forward is illuminated, and you can find your way out of the forest.",
-      "buttons": [
-        {
-          "label": "Leave the forest",
-          "stepID": "6_end"
-        }
-      ]
-    },
-    {
-      "stepID": "5_rewind",
-      "label": "You press the Rewind button, and you find yourself back at the entrance to the forest.",
-      "buttons": [
-        {
-          "label": "Leave the forest",
-          "stepID": "6_end"
-        }
-      ]
-    },
-    {
-      "stepID": "6_end",
-      "label": "Thanks for playing!",
-      "buttons": [
-        {
-          "label": "Back to home",
-          "stepID": "",
-          "route": "/"
-        }
-      ]
+      "stepID": "3_readnote",
+      "label": "The note is written in hasty handwriting, and seems to include tomorrow's date, along with the words \"Obsidian Fangs\"",
+      "buttons": [{ "label": "Look elsewhere in the room for answers", "stepID": "1_investigateitem", "route": "" }]
     }
   ],
-  "items": []
+  "items": [
+    { "itemID": "waterbucket", "name": "Bucket of Water" },
+    { "itemID": "leatherboxkey", "name": "Ornate Key" },
+    { "itemID": "lantern", "name": "Oil Lantern" }
+  ]
 }
