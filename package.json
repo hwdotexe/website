@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-css": "tailwindcss -i ./src/tailwind.css -o ./src/generated-tailwind.css --minify",
+    "build": "npm run build-css && ng build -c=production && npm run post-build",
+    "post-build": "cp -a docs/browser docs/ && cp index.html 404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
