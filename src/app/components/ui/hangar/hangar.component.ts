@@ -1,11 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-hangar',
-  standalone: true,
-  imports: [],
-  templateUrl: './hangar.component.html',
-  styleUrls: ['./hangar.component.css']
+    selector: 'app-hangar',
+    imports: [],
+    templateUrl: './hangar.component.html',
+    styleUrls: ['./hangar.component.css']
 })
 export class HangarComponent implements OnInit {
   @Input() title: string = '';
