@@ -1,6 +1,16 @@
 {
-  "prettier.bracketSameLine": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "eslint.run": "onSave",
   "editor.formatOnSave": true,
   "editor.wrappingIndent": "indent",
@@ -10,5 +20,8 @@
   "typescript.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always"
-  }
+  },
+  "prettier.configPath": ".prettierrc",
+  "prettier.requireConfig": true,
+  "prettier.bracketSameLine": true
 }

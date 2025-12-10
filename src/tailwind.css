@@ -2,17 +2,17 @@
 @config "../tailwind.config.js";
 
 @theme {
-  --font-game: [ '"Press Start 2P"', 'ui-sans-serif'];
-  --font-body: [ '"PT Sans"', 'ui-sans-serif'];
-  --font-legend: [ '"UnifrakturCook"', 'serif'];
-  --font-story: [ '"Macondo Swash Caps"', 'serif'];
+  --font-game: 'Press Start 2P', 'ui-sans-serif';
+  --font-body: 'PT Sans', 'ui-sans-serif';
+  --font-legend: 'UnifrakturCook', 'serif';
+  --font-story: 'Macondo Swash Caps', 'serif';
 
-  --color-ltShamrock-100: '#279A51';
-  --color-ltShamrock-200: '#218345';
-  --color-ltShamrock-300: '#186233';
-  --color-dkShamrock: '#186333';
-  --color-ltDeepSky-100: '#1FB4FF';
-  --color-ltDeepSky-200: '#00A3F5';
-  --color-ltDeepSky-300: '#0088CC';
-  --color-ltViolet-100: '#4C4B63';
+  --color-ltShamrock-100: #279a51;
+  --color-ltShamrock-200: #218345;
+  --color-ltShamrock-300: #186233;
+  --color-dkShamrock: #186333;
+  --color-ltDeepSky-100: #1fb4ff;
+  --color-ltDeepSky-200: #00a3f5;
+  --color-ltDeepSky-300: #0088cc;
+  --color-ltViolet-100: #4c4b63;
 }

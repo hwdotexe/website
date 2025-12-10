@@ -17,10 +17,19 @@
               "base": "docs"
             },
             "index": "src/index.html",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/assets", "src/CNAME", "src/robots.txt"],
-            "styles": ["src/styles.css", "src/generated-tailwind.css"],
+            "assets": [
+              "src/assets",
+              "src/CNAME",
+              "src/robots.txt"
+            ],
+            "styles": [
+              "src/styles.css",
+              "src/generated-tailwind.css"
+            ],
             "scripts": [],
             "browser": "src/main.ts"
           },
@@ -38,14 +47,20 @@
                   "maximumError": "15kb"
                 }
               ],
-              "styles": ["src/styles.css", "src/generated-tailwind.css"],
+              "styles": [
+                "src/styles.css",
+                "src/generated-tailwind.css"
+              ],
               "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "styles": ["src/styles.css", "src/tailwind.css"]
+              "styles": [
+                "src/styles.css",
+                "src/tailwind.css"
+              ]
             }
           },
           "defaultConfiguration": "development"

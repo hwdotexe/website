@@ -1,4 +1,3 @@
 module.exports = {
-  content: ['./src/**/*.{html,ts}'],
-  plugins: []
+  content: ['./src/**/*.{html,ts}']
 };

@@ -31,7 +31,7 @@
         <div class="text-center">
           @for (b of lastStep.buttons; track b) {
             <button
-              class="font-body py-2 px-3 my-3 mr-2 rounded-md shadow-md font-bold text-gray-50 bg-ltDeepSky-100 hover:bg-ltDeepSky-200 active:bg-ltDeepSky-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:active:bg-gray-950"
+              class="font-body py-2 px-3 my-3 mr-2 rounded-md shadow-md font-bold text-gray-50 bg-ltDeepSky-100 hover:cursor-pointer hover:bg-ltDeepSky-200 active:bg-ltDeepSky-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:active:bg-gray-950"
               (click)="advanceStep(lastStep.stepID, b)">
               {{ b.label }}
             </button>
