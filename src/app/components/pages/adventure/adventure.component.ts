@@ -9,11 +9,10 @@ import { AdventureService } from '../../../services/adventure-service/adventure.
 import { LoadingService } from '../../../services/loading-service/loading.service';
 
 @Component({
-  selector: 'app-adventure',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './adventure.component.html',
-  styleUrl: './adventure.component.css'
+    selector: 'app-adventure',
+    imports: [CommonModule],
+    templateUrl: './adventure.component.html',
+    styleUrl: './adventure.component.css'
 })
 export class AdventureComponent implements OnInit, OnDestroy {
   steps: AdventureStep[];

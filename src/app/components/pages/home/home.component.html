@@ -1,114 +1,108 @@
 <div class="flex justify-center items-center text-center min-h-screen text-gray-800 dark:text-gray-300">
-  <div class="md:min-w-[50rem]">
+  <div class="md:min-w-200">
     <h1 class="font-game text-2xl md:text-3xl mt-16">Hi, I'm Haden</h1>
     <hr class="border-gray-600 border-b-2 my-6 mx-auto max-w-[90%] md:max-w-full" />
 
     <div class="text-center bg-gray-100 dark:bg-gray-900 rounded-md shadow-sm py-7 my-8">
-      <app-social-button
-        icon="fa-brands fa-linkedin"
-        color="bg-red-700"
-        link="https://www.linkedin.com/in/haden-watne/"
-        title="LinkedIn"></app-social-button>
-      <app-social-button icon="fa-brands fa-github" color="bg-orange-600" link="https://github.com/hwdotexe" title="Github"></app-social-button>
+      <app-social-button icon="fa-brands fa-github" color="bg-red-700" link="https://github.com/hwdotexe" title="Github"></app-social-button>
       <app-social-button
         icon="fa-regular fa-envelope"
-        color="bg-amber-400"
+        color="bg-orange-600"
         link="mailto:hello@hadenwatne.com"
         title="Email"
         [blank]="false"></app-social-button>
       <br class="md:hidden" />
       <app-social-button
         icon="fa-solid fa-award"
-        color="bg-green-600"
+        color="bg-amber-400"
         link="https://www.credly.com/users/haden-watne/badges"
         title="Credentials"></app-social-button>
       <app-social-button
-        icon="fa-brands fa-stack-overflow"
-        color="bg-sky-600"
-        link="https://stackoverflow.com/users/15302833/hwdev?tab=profile"
-        title="StackOverflow"></app-social-button>
-      <app-social-button
         icon="fa-regular fa-file"
-        color="bg-violet-800"
+        color="bg-green-600"
         link="../../../assets/file/haden_watne_resume.pdf"
         title="Resume"></app-social-button>
     </div>
 
     <div>
       <app-hangar title="Who I Am" tagline="" color="bg-ltShamrock-100 dark:bg-dkShamrock" class="block md:inline-block my-5">
-        <ul>
-          <li>Full-Stack Software Engineer</li>
+        <ul class="columns-2 text-sm">
+          <li>Software Engineer</li>
           <li>Coffee Connoisseur</li>
           <li>Amateur Hiker</li>
+          <li>Storyteller</li>
           <li>Privacy Advocate</li>
+          <li>Small Business Owner</li>
         </ul>
       </app-hangar>
-      <app-hangar title="What I Know" tagline="" color="bg-ltShamrock-100 dark:bg-dkShamrock" class="block md:inline-block my-5">
-        <ul class="columns-2">
-          <li>Agile</li>
+      <app-hangar title="How I Work" tagline="" color="bg-ltShamrock-100 dark:bg-dkShamrock" class="block md:inline-block my-5">
+        <ul class="columns-2 text-sm">
+          <li>Agile & SCRUM</li>
           <li>CI/CD</li>
-          <li>SQL / NoSQL</li>
-          <li>ReactiveX</li>
-          <li>Redux</li>
-          <li>Splunk</li>
-          <li>Quantum Metric</li>
-          <li>Version Control</li>
+          <li>LEAN Advocate</li>
+          <li>Automation</li>
+          <li>Modernization</li>
+          <li>Servant Leadership</li>
         </ul>
       </app-hangar>
     </div>
 
-    <div class="text-center bg-gray-100 dark:bg-gray-900 rounded-md shadow-sm py-7 my-8 md:mb-4">
-      <div class="text-3xl text-gray-600 dark:text-gray-500">
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-brands fa-angular"></i>
-          <p class="text-xs font-semibold">Angular</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-brands fa-java"></i>
-          <p class="text-xs font-semibold">Java</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-file-code"></i>
-          <p class="text-xs font-semibold">C#</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-brands fa-js"></i>
-          <p class="text-xs font-semibold">JavaScript</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-brands fa-python"></i>
-          <p class="text-xs font-semibold">Python</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-database"></i>
-          <p class="text-xs font-semibold">Data</p>
-        </div>
-
-        <br class="inline-block md:hidden" />
-
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-dice-d20"></i>
-          <p class="text-xs font-semibold">D&D</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-tree"></i>
-          <p class="text-xs font-semibold">Hiking</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-music"></i>
-          <p class="text-xs font-semibold">Music</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-mug-hot"></i>
-          <p class="text-xs font-semibold">Coffee</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-gamepad"></i>
-          <p class="text-xs font-semibold">Gaming</p>
-        </div>
-        <div class="inline-block mx-3 my-1">
-          <i class="fa-solid fa-dumbbell"></i>
-          <p class="text-xs font-semibold">Fitness</p>
+    <div class="shadow-sm mb-10 mt-8">
+      <div class="bg-ltShamrock-100 dark:bg-dkShamrock rounded-tl-md rounded-tr-md">
+        <p class="text-xl font-game py-5 text-white">What I Know</p>
+      </div>
+      <div class="text-center bg-gray-100 dark:bg-gray-900 rounded-bl-md rounded-br-md p-3">
+        <div class="text-3xl text-gray-600 dark:text-gray-500 columns-4">
+          <ul class="content-center">
+            <li class="my-5">
+              <i class="fa-brands fa-angular"></i>
+              <p class="text-xs font-semibold">Angular</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-java"></i>
+              <p class="text-xs font-semibold">Java</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-solid fa-file-code"></i>
+              <p class="text-xs font-semibold">C#</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-js"></i>
+              <p class="text-xs font-semibold">JavaScript</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-python"></i>
+              <p class="text-xs font-semibold">Python</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-solid fa-database"></i>
+              <p class="text-xs font-semibold">SQL</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-solid fa-circle-nodes"></i>
+              <p class="text-xs font-semibold">No-SQL</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-stripe"></i>
+              <p class="text-xs font-semibold">Stripe</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-aws"></i>
+              <p class="text-xs font-semibold">AWS</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-figma"></i>
+              <p class="text-xs font-semibold">Figma</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-brands fa-github"></i>
+              <p class="text-xs font-semibold">Github</p>
+            </li>
+            <li class="my-5">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p class="text-xs font-semibold">Splunk</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
