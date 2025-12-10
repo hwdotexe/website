@@ -6,42 +6,52 @@
     <hr class="border-gray-600 border-b-2 my-6 mx-auto max-w-[90%] md:max-w-full" />
 
     <div class="md:mx-auto text-left">
-      <p *ngIf="isLoading$ | async" class="animate-pulse w-full text-center">Loading...</p>
-      <div *ngFor="let step of unlockedSteps" class="text-gray-50">
-        <ng-container *ngIf="!step.self; else self">
-          <div speech-bubble darkPurple pbottom aleft class="p-3 font-story text-lg my-3 w-fit mr-auto animate__animated animate__fadeInLeft">
-            <p>
-              {{ step.label }}
-            </p>
-          </div>
-        </ng-container>
-        <ng-template #self>
-          <div speech-bubble purple pbottom aright class="p-3 font-story text-lg my-3 w-fit ml-auto animate__animated animate__fadeInRight">
-            <p>
-              {{ step.label }}
-            </p>
-          </div>
-        </ng-template>
-      </div>
-
-      <div class="text-center" *ngIf="unlockedSteps[unlockedSteps.length - 1] as lastStep">
-        <button
-          class="font-body py-2 px-3 my-3 mr-2 rounded-md shadow-md font-bold text-gray-50 bg-ltDeepSky-100 hover:bg-ltDeepSky-200 active:bg-ltDeepSky-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:active:bg-gray-950"
-          *ngFor="let b of lastStep.buttons"
-          (click)="advanceStep(lastStep.stepID, b)">
-          {{ b.label }}
-        </button>
-      </div>
-
-      <div class="text-left" *ngIf="!!unlockedItems && unlockedItems.length > 0">
-        <hr class="border-gray-600 border-b-2 my-3 mx-auto max-w-[90%] md:max-w-full" />
-        <div class="md:max-w-[50%] md:mx-auto">
-          <h2 class="text-2xl md:text-3xl font-legend text-center mb-3">Your Inventory</h2>
-          <ul class="list-disc ml-8 md:ml-4">
-            <li *ngFor="let item of unlockedItems">{{ item.name }}</li>
-          </ul>
+      @if (isLoading$ | async) {
+        <p class="animate-pulse w-full text-center">Loading...</p>
+      }
+      @for (step of unlockedSteps; track step) {
+        <div class="text-gray-50">
+          @if (!step.self) {
+            <div speech-bubble darkPurple pbottom aleft class="p-3 font-story text-lg my-3 w-fit mr-auto animate__animated animate__fadeInLeft">
+              <p>
+                {{ step.label }}
+              </p>
+            </div>
+          } @else {
+            <div speech-bubble purple pbottom aright class="p-3 font-story text-lg my-3 w-fit ml-auto animate__animated animate__fadeInRight">
+              <p>
+                {{ step.label }}
+              </p>
+            </div>
+          }
         </div>
-      </div>
+      }
+
+      @if (unlockedSteps[unlockedSteps.length - 1]; as lastStep) {
+        <div class="text-center">
+          @for (b of lastStep.buttons; track b) {
+            <button
+              class="font-body py-2 px-3 my-3 mr-2 rounded-md shadow-md font-bold text-gray-50 bg-ltDeepSky-100 hover:bg-ltDeepSky-200 active:bg-ltDeepSky-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:active:bg-gray-950"
+              (click)="advanceStep(lastStep.stepID, b)">
+              {{ b.label }}
+            </button>
+          }
+        </div>
+      }
+
+      @if (!!unlockedItems && unlockedItems.length > 0) {
+        <div class="text-left">
+          <hr class="border-gray-600 border-b-2 my-3 mx-auto max-w-[90%] md:max-w-full" />
+          <div class="md:max-w-[50%] md:mx-auto">
+            <h2 class="text-2xl md:text-3xl font-legend text-center mb-3">Your Inventory</h2>
+            <ul class="list-disc ml-8 md:ml-4">
+              @for (item of unlockedItems; track item) {
+                <li>{{ item.name }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
     </div>
   </div>
 </div>
