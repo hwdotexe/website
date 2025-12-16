@@ -26,10 +26,6 @@
               "src/CNAME",
               "src/robots.txt"
             ],
-            "styles": [
-              "src/styles.css",
-              "src/generated-tailwind.css"
-            ],
             "scripts": [],
             "browser": "src/main.ts"
           },
